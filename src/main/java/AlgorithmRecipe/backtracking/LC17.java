@@ -21,11 +21,25 @@ import java.util.List;
  */
 public class LC17 {
 
-    public static void main(String args[]) {
 
-    }
-
+    public static final String[] digits2Letters = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     
-    //public List<String> findAllPossibleCombination() 
-    //public List<String> findAllPossibleCombination() 
+    
+    public void findAllPossibleCombination(String remainingDigit, String currentString, List<String> finalOutput) {
+        
+        if(remainingDigit.length() == 0){
+            finalOutput.add(currentString);
+            return;
+        } else {
+            char[] allChars = digits2Letters[remainingDigit.charAt(0)-'0'].toCharArray();
+            if(allChars.length == 0){
+                findAllPossibleCombination(remainingDigit.substring(1),currentString,finalOutput);
+            } else {
+                for(char c : allChars){
+                    findAllPossibleCombination(remainingDigit.substring(1),currentString+c,finalOutput);
+                }
+            }
+        }
+        
+    }
 }
