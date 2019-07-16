@@ -5,7 +5,7 @@ public class TreeNode {
     public Integer integerValue;
     public TreeNode left;
     public TreeNode right;
-    public Integer currentIndex;
+    public Integer index;
 
     public TreeNode(){
 
