@@ -11,6 +11,10 @@ public class TreeNode {
 
     }
 
+    public String getNodeName(){
+        return (stringValue == null?"":stringValue)+""+(integerValue==null?"":integerValue);
+    }
+    
     public TreeNode(Integer integerValue){
         this.integerValue = integerValue;
     }

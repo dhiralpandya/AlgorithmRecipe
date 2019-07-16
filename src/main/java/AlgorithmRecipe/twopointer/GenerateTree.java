@@ -1,4 +1,4 @@
-package AlgorithmRecipe.tree.twopointer;
+package AlgorithmRecipe.twopointer;
 
 import AlgorithmRecipe.tree.util.TreeNode;
 
@@ -19,6 +19,9 @@ public class GenerateTree {
             TreeNode mid = nodes[p1];
             mid.left = nodes[p2];
             p2++;
+            if(p2 >= a.length){
+                break;
+            }
             mid.right = nodes[p2];
             p2++;
         }
