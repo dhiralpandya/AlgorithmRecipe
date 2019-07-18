@@ -9,6 +9,7 @@ import java.util.TreeMap;
 /*
 Companies : [UBER]
  */
+
 /**
  * Anagram Substring Search (Or Search for all permutations)
  * Given a text txt[0..n-1] and a pattern pat[0..m-1], write a function search(char pat[], char txt[]) that prints 
@@ -38,6 +39,10 @@ public class GFGAnagramSubstringSearch {
             
             mainCharCountMap.put(mainString.charAt(count),mainCharCountMap.getOrDefault(mainString.charAt(count),0)+1);
             mainCharCountMap.put(mainString.charAt(count-patLength),mainCharCountMap.get(mainString.charAt(count-patLength))-1);
+        }
+        
+        if(compare(patternCharCountMap,mainCharCountMap)){
+            output.add(mainStringLength-patLength);
         }
         
         return output;
