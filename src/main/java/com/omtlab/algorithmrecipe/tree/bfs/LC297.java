@@ -3,7 +3,7 @@ package com.omtlab.algorithmrecipe.tree.bfs;
 Companies: [FACEBOOK, UBER]
  */
 
-import com.omtlab.algorithmrecipe.tree.util.TreeNode;
+import com.omtlab.algorithmrecipe.common.util.TreeNode;
 import com.google.common.collect.Lists;
 
 import java.util.LinkedList;

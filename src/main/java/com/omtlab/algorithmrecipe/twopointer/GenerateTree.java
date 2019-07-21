@@ -1,6 +1,6 @@
 package com.omtlab.algorithmrecipe.twopointer;
 
-import com.omtlab.algorithmrecipe.tree.util.TreeNode;
+import com.omtlab.algorithmrecipe.common.util.TreeNode;
 
 public class GenerateTree {
     

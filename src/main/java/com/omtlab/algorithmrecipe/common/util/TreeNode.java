@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.tree.util;
+package com.omtlab.algorithmrecipe.common.util;
 
 public class TreeNode {
     public String stringValue;

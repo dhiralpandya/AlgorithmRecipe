@@ -1,6 +1,6 @@
 package com.omtlab.algorithmrecipe.twopointer;
 
-import com.omtlab.algorithmrecipe.tree.util.TreeUtil;
+import com.omtlab.algorithmrecipe.common.util.TreeUtil;
 import org.junit.Test;
 
 public class GenerateTreeTest {

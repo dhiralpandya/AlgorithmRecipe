@@ -4,7 +4,7 @@ package com.omtlab.algorithmrecipe.tree.bfs;
 Companies : [FACEBOOK]
  */
 
-import com.omtlab.algorithmrecipe.tree.util.TreeNode;
+import com.omtlab.algorithmrecipe.common.util.TreeNode;
 import com.omtlab.algorithmrecipe.twopointer.GenerateTree;
 import com.google.common.collect.Lists;
 

@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.tree.util;
+package com.omtlab.algorithmrecipe.common.util;
 
 import java.util.*;
 
