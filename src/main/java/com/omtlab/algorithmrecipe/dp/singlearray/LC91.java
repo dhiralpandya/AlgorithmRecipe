@@ -71,7 +71,9 @@ public class LC91 {
             }
             
             if(twoChar >= 10 && twoChar <= 26){
-                int previousSum = dp[i-2];
+                int previousSum = dp[i-2];//Here we are taking previous previous count 
+                // because previous char is part of twoChar, 
+                // So thats why combination of two char will become one count  
                 dp[i]+=previousSum;// We already have one included as part of Size ZERO
             }
             
