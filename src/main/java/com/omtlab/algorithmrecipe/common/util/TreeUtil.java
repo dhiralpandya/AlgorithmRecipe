@@ -1,5 +1,7 @@
 package com.omtlab.algorithmrecipe.common.util;
 
+import com.omtlab.algorithmrecipe.common.node.TreeNode;
+
 import java.util.*;
 
 //Source : https://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram

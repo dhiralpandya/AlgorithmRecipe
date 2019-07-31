@@ -29,11 +29,12 @@ public class LC15 {
     
     //https://www.youtube.com/watch?v=-AMHUdZc9ss
     public List<List<Integer>> threeSum(Integer[] input){
-        Arrays.sort(input);
+        Arrays.sort(input);//Imp Steps
+        
         List<List<Integer>> output = Lists.newArrayList();
         
         for(int i = 0; i < input.length -3 ; i++){
-            if(i == 0 || input[i] > input[i-1]){
+            if(i == 0 || input[i] > input[i-1]){ // This is to ignore duplicate
                 int start = i+1;
                 int end = input.length-1;
                 while (start < end){

@@ -1,6 +1,6 @@
 package com.omtlab.algorithmrecipe.tree.bfs;
 
-import com.omtlab.algorithmrecipe.common.util.TreeNode;
+import com.omtlab.algorithmrecipe.common.node.TreeNode;
 import com.omtlab.algorithmrecipe.twopointer.GenerateTree;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
