@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.dp.singlearray;
+package com.omtlab.algorithmrecipe.twopointer;
 
 import java.util.Map;
 

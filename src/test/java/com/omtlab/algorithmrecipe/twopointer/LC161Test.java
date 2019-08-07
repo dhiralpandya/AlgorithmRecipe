@@ -1,9 +1,8 @@
-package com.omtlab.algorithmrecipe.dp.singlearray;
+package com.omtlab.algorithmrecipe.twopointer;
 
+import com.omtlab.algorithmrecipe.twopointer.LC161;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC161Test {
 
