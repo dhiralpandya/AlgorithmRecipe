@@ -1,6 +1,5 @@
-package com.omtlab.algorithmrecipe.sumarray;
+package com.omtlab.algorithmrecipe.array.sumarray;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 

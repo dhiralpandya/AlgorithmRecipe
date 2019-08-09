@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.sumarray;
+package com.omtlab.algorithmrecipe.array.sumarray;
 
 import com.google.common.collect.Lists;
 

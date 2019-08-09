@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.sumarray;
+package com.omtlab.algorithmrecipe.array.sumarray;
 
 import com.google.common.collect.Lists;
 import org.junit.Assert;
@@ -6,8 +6,6 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class LC636Test {
 

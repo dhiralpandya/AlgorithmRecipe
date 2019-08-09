@@ -1,7 +1,6 @@
-package com.omtlab.algorithmrecipe.sumarray;
+package com.omtlab.algorithmrecipe.array.sumarray;
 
 import com.google.common.collect.Lists;
-import com.omtlab.algorithmrecipe.dp.matrix.startwithzero.GFGEditDistanceTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +8,6 @@ import org.junit.runners.Parameterized;
 
 import java.util.Collection;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class GFGFindPairForSumTest {

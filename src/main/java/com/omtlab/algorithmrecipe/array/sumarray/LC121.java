@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.sumarray;
+package com.omtlab.algorithmrecipe.array.sumarray;
 
 /**
  * 121. Best Time to Buy and Sell Stock
