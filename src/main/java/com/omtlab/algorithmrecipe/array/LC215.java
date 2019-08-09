@@ -23,7 +23,8 @@ import java.util.PriorityQueue;
 public class LC215 {
 
     public int getKthLargest(int[] nums, int k) {
-      Arrays.sort(nums);
+      Arrays.sort(nums);//Note that it is the kth largest element in the sorted order,
+        //  not the kth distinct element.
       return nums[nums.length-k];
     }
 }
