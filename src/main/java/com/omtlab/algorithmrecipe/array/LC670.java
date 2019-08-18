@@ -22,11 +22,22 @@ public class LC670 {
     
     public int maxValue(int input){
         char[] allChars = String.valueOf(input).toCharArray();
-        int output = 0;
+        int output = input;
         
         int[] lastIndexOfEachInt = new int[10];
         for(int i = 0; i < allChars.length; i++){
-            
+           lastIndexOfEachInt[Character.getNumericValue(allChars[i])]=i;    
+        }
+
+        for(int i = 0; i < allChars.length; i++){
+            int currentInt = Character.getNumericValue(allChars[i]);
+            for(int j = 9;j > currentInt; j--){//Make sure current Digit is greater than j 
+                if(lastIndexOfEachInt[j] > i){//Index of Bigger J is more at right side than i 
+                    allChars[i] = (char)(j+'0');
+                    allChars[lastIndexOfEachInt[j]]=(char)(currentInt+'0');
+                    return Integer.parseInt(new String(allChars));
+                }
+            }
         }
         
         return output;

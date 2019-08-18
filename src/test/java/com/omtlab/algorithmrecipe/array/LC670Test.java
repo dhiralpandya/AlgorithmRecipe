@@ -1,5 +1,6 @@
 package com.omtlab.algorithmrecipe.array;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,6 +11,7 @@ public class LC670Test {
     
     @Test
     public void maxValue() {
-        lc670.maxValue(1); 
+        Assert.assertEquals(9941,lc670.maxValue(9914)); 
     }
+    
 }
