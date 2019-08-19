@@ -1,7 +1,6 @@
 package com.omtlab.algorithmrecipe.twopointer;
 
 import com.google.common.collect.Lists;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
