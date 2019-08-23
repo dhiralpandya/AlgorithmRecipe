@@ -50,24 +50,24 @@ public class LC33 {
                 return end;
             }
             
-            if(midValue > startValue){
-                if(target > midValue){
+            if(midValue > startValue){//All of left side is less than mid. 
+                if(target > midValue){//Since all left is less than mid and target is greater than mid we will move right side
                     start=mid+1;
-                } else if(target > startValue){
+                } else if(target > startValue){// Here target is less than mid, if target is greater than start, It means target is between start and mid
                     end = mid-1;
-                } else {
+                } else { // Here target is less than mid and less than start, It means we should look for right side
                     start=mid+1;
                 }
             } else { 
-                if(target < midValue){
-                    if(midValue < endValue && target < endValue){
+                if(target < midValue){//Here mid is less than start and  target is less than mid  
+                    if(midValue < endValue && target < endValue){ //To handle [5,1,2,3,4] to check mid is less than end and  target is also less than end then move to left
                         end = mid-1;
-                    } else {
+                    } else { // Sine target is less than mid and mid is less than start and above condition is also false so we have only one why to check 
                         start = mid+1;
                     }
-                } else if(target > endValue){
+                } else if(target > endValue){//We target is greater than end it means all we need is at right side
                     end = mid-1;
-                } else {
+                } else {// Remaining place is right side only
                     start = mid+1;
                 }
             }
