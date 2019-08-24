@@ -1,9 +1,8 @@
-package com.omtlab.algorithmrecipe.array.binarysearch;
+package com.omtlab.algorithmrecipe.array.binarysearch.rotated;
 
+import com.omtlab.algorithmrecipe.array.binarysearch.rotated.LC33;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC33Test {
 

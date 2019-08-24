@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array.binarysearch;
+package com.omtlab.algorithmrecipe.array.binarysearch.rotated;
 
 import java.util.Arrays;
 
