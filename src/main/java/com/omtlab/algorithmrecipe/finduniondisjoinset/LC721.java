@@ -42,6 +42,11 @@ public class LC721 {
      * https://github.com/dhiralpandya/learning/blob/master/Learn/src/com/omt/learn/geekforgeek/greedy/FindCycleInGraphUnionFindPathComp.java
      * https://www.youtube.com/watch?v=wU6udHRIkcc
      */
+    /**
+     * BELOW ALGO TAKES 584 ms in Leetcode, Check other method accountsMergePathComp for faster solution
+     * @param accounts
+     * @return
+     */
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
 
         DisJoinSet disJoinSet = new DisJoinSet();
@@ -89,6 +94,72 @@ public class LC721 {
                 emailParentSet.put(find(email1), null); 
             } else {
                 emailParentSet.put(find(email1), find(email2));   
+            }
+        }
+    }
+
+
+
+    /**
+     * Check this before jumping to solution 
+     * https://github.com/dhiralpandya/learning/blob/master/Learn/src/com/omt/learn/geekforgeek/greedy/FindCycleInGraphUnionFindPathComp.java
+     * https://www.youtube.com/watch?v=wU6udHRIkcc
+     */
+    /**
+     * BELOW ALGO TAKES 72 ms faster than above due to path compression
+     * @param accounts
+     * @return
+     */
+    public List<List<String>> accountsMergePathComp(List<List<String>> accounts) {
+
+        DisJoinSetPathCompression disJoinSet = new DisJoinSetPathCompression();
+        Map<String,String> emailNameMap = new HashMap<>();
+        for(List<String> account:accounts){
+            String name = account.get(0);
+
+            disJoinSet.union(account.get(1),null);//First email
+            emailNameMap.put(account.get(1),name);//Add name with first email
+
+            for(int i = 2; i < account.size();i++){
+                disJoinSet.union(account.get(1),account.get(i));//Merge everything into first email
+                emailNameMap.put(account.get(i),name); //Add name attached to this email
+            }
+        }
+
+
+        Map<String,List<String>> parentEmailMap = new HashMap<>();
+        for(String email:emailNameMap.keySet()){
+            parentEmailMap.computeIfAbsent(disJoinSet.findPathComp(email),l-> Lists.newArrayList()).add(email);
+        }
+
+        for(List<String> emails : parentEmailMap.values()){
+            Collections.sort(emails);
+            String name = emailNameMap.get(emails.get(0));
+            emails.add(0,name);
+        }
+
+        return new ArrayList<>(parentEmailMap.values());
+    }
+
+
+    static class DisJoinSetPathCompression{
+        Map<String,String> emailParentSet = new HashMap<>();
+
+        public String findPathComp(String email){
+            //Here second check is to avoid stack over flow in case of cycle. 
+            if(emailParentSet.get(email) == null || emailParentSet.get(email).equals(email)){
+                return email;
+            }
+            String outputEmail = findPathComp(emailParentSet.get(email));
+            emailParentSet.put(email,outputEmail);
+            return outputEmail;
+        }
+
+        public void union(String email1, String email2){
+            if(email2 == null){
+                emailParentSet.put(findPathComp(email1), null);
+            } else {
+                emailParentSet.put(findPathComp(email1), findPathComp(email2));
             }
         }
     }
