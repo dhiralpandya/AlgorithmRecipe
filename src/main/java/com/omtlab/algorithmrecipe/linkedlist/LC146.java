@@ -1,5 +1,6 @@
 package com.omtlab.algorithmrecipe.linkedlist;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -34,6 +35,11 @@ import java.util.Map;
  */
 public class LC146 {
 
+    /**
+     * Below solution is only for your understanding, 
+     * DO NOT use as final solution in interview, 
+     * for interview we will use actual linkedList implementation. 
+     */
     public static class LRUCacheSimpleQuick {
         private final int capacity;
         private LinkedHashMap<Integer,Integer> linkedHashMap = null;
@@ -56,4 +62,59 @@ public class LC146 {
             linkedHashMap.put(key,value);
         }
     }
+
+
+    /**
+     * Here we will use linkedList with node linked to next and previous node. 
+     * Like this
+     * [HEAD]<->[2]<->[3]<->[1]<->[TAIL]
+     * you just have to remove and add node each time when we access it.
+     */
+    static class LinkNode{
+        LinkNode next;
+        LinkNode pre;
+        int value;
+
+        LinkNode(){
+            
+        }
+
+        LinkNode(LinkNode next, LinkNode pre){
+            this.next = next;
+            this.pre = pre;
+        }
+    }
+    
+    
+    public static class LRU{
+        Map<Integer,LinkNode> mapIdNode = new HashMap<>();
+        int capacity; 
+        int currentCount;
+        LinkNode head = new LinkNode();
+        LinkNode tail = new LinkNode();
+        
+        public LRU(int capacity){
+            this.capacity =capacity;
+            head.next = tail;
+            tail.pre = head;
+        }
+        
+        
+        
+        
+        void remove(LinkNode remove){
+            
+            LinkNode next = remove.next;
+            LinkNode pre = remove.pre;
+            pre.next = next;
+            next.pre = pre; 
+            
+        }
+
+        void add(LinkNode add){
+           // LinkNode
+        }
+    }
+    
+    
 }
