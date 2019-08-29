@@ -98,11 +98,49 @@ public class LC146 {
             head.next = tail;
             tail.pre = head;
         }
+
+        public int get(int key){
+            
+            if(mapIdNode.containsKey(key)){
+                LinkNode node = mapIdNode.get(key);
+                
+                remove(node);
+                add(node);
+                
+                return node.value;
+            }
+            
+            return -1;
+        }
         
         
         
-        
-        void remove(LinkNode remove){
+
+        public void put(int key, int value) {
+            
+            if(mapIdNode.containsKey(key)){
+                LinkNode node = mapIdNode.get(key);
+                node.value = value;
+                remove(node);
+                add(node);
+            }else {
+
+                if (currentCount >= capacity) {
+                    mapIdNode.remove(tail.pre.value);
+                    remove(tail.pre);
+                    currentCount--;
+                }
+
+                LinkNode node = new LinkNode();
+                node.value = value;
+                mapIdNode.put(key, node);
+                add(node);
+
+                currentCount++;
+            }
+        }
+
+            void remove(LinkNode remove){
             
             LinkNode next = remove.next;
             LinkNode pre = remove.pre;
@@ -112,7 +150,11 @@ public class LC146 {
         }
 
         void add(LinkNode add){
-           // LinkNode
+           LinkNode next = head.next;
+           head.next = add;
+           add.next = next;
+           add.pre = head; 
+           next.pre = add;
         }
     }
     
