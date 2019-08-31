@@ -20,6 +20,15 @@ public class LC206  {
     
     
     public LinkNode reverse(LinkNode root){
-        
+        LinkNode newRoot = root;
+        LinkNode next = root.next;
+        while(next != null ){//&& next != root This to avoid loop, but code working without this also.
+            LinkNode temp = next.next;
+            next.next = newRoot;
+            newRoot = next;
+            next = temp;
+        }
+        root.next = null;
+        return newRoot;
     }
 }
