@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.matrix.bfs;
+package com.omtlab.algorithmrecipe.backtracking;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -33,7 +33,7 @@ Companies: [FACEBOOK]
  *
  * Output: 3
  */
-public class LC200 {
+public class LC200Copy {
     static class Cell {
         int row;
         int column;
