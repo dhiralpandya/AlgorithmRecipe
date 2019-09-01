@@ -6,6 +6,17 @@ import java.util.*;
 
 //Source : https://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram
 public class TreeUtil {
+    
+    
+    public static TreeNode getNodeByValue(TreeNode root, int value){
+        if(root == null || root.integerValue == value){
+            return root;
+        }
+        TreeNode found = getNodeByValue(root.right,value);
+        return found == null?getNodeByValue(root.left,value):found;
+    }
+    
+    
     public static <T extends Comparable<?>> void printTreeNode(TreeNode root) {
         int maxLevel = TreeUtil.maxLevel(root);
 
