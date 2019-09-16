@@ -22,6 +22,12 @@ import java.util.PriorityQueue;
  */
 public class LC215 {
 
+    /**
+     * This is not an optimal solution, We have to do quick sort with partition
+     * @param nums
+     * @param k
+     * @return
+     */
     public int getKthLargest(int[] nums, int k) {
       Arrays.sort(nums);//Note that it is the kth largest element in the sorted order,
         //  not the kth distinct element.

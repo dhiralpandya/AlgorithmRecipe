@@ -56,8 +56,13 @@ Companies: [FACEBOOK, UBER]
  * Output: false
  */
 public class LC10  {
-    
-    
+
+    /**
+     * Find image LC10 in documentation package.
+     * @param string
+     * @param pattern
+     * @return
+     */
     public boolean isMatch(String string,String pattern){
         //Here we are going to take one extra row and column for empty string 
         boolean result[][] = new boolean[string.length()+1][pattern.length()+1];

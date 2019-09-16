@@ -52,6 +52,14 @@ public class LC238 {
      * @param input
      * @return
      */
+
+    /**
+     * LEFT contains all the product of left elements "excluding current index." 
+     * RIGHT contains all the product of right elements "excluding current index."
+     * LEFT*RIGHT = product of all left and right elements "excluding current index."
+     * @param input
+     * @return
+     */
     public int[] productExceptSelf(int[] input) {
         int[] left = new int[input.length];
         int[] right = new int[input.length];
