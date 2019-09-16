@@ -59,9 +59,21 @@ public class LC10  {
 
     /**
      * Find image LC10 in documentation package.
-     * @param string
-     * @param pattern
-     * @return
+     *
+     * Equation :
+     * 
+     * T[i][j] =   
+     *             if string[i] == pattern[j] OR  pattern[j] = "."
+     *                     SET Value at T[i-1][j-1]
+     *                     
+     *             if pattern[j] == "*"
+     *                      CHECK if T[i][j-2] is true or not
+     *                          if T[i][j-2] is false then
+     *                              Check pattern[j-1] == string[i] OR pattern[j-1] == "."
+     *                                  SET Above Value T[i-1][j] 
+     *            
+     *            
+     * 
      */
     public boolean isMatch(String string,String pattern){
         //Here we are going to take one extra row and column for empty string 
