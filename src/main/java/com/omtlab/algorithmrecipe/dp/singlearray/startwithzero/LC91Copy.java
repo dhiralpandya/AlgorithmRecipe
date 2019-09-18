@@ -16,7 +16,7 @@ Companies : [FACEBOOK]
  Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
  The number of ways decoding "12" is 2.
  */
-public class LC91 {
+public class LC91Copy {
 
     /**Credit: https://discuss.leetcode.com/topic/35840/java-clean-dp-solution-with-explanation
      * I used a dp array of size n + 1 to save subproblem solutions.
