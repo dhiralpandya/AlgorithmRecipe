@@ -80,7 +80,7 @@ public class LC139 {
      *      * Char Index   -------------
      *      *              -|0|1|2|3|4|5
      * 
-     * 
+     * NOTE : CHECK SIMPLE WAY METHOD :  wordBreakMyStyle
      * 
      */
     public boolean wordBreak(String input, List<String> words){
@@ -110,6 +110,32 @@ public class LC139 {
             }
         }
         
+        return cache[input.length()];
+    }
+
+
+    /**
+     * Same above algorithm but much much simple way
+     * @param input
+     * @param words
+     * @return
+     */
+    public boolean wordBreakMyStyle(String input, List<String> words){
+        
+        boolean cache[] = new boolean[input.length()+1];
+        cache[0] = true;//for zero length
+        for(int length = 1; length <= input.length();length++){
+            for(int j=length; j >= 0 ;j--){
+                if(cache[j]){
+                    String wordToCheck = input.substring(j,length);
+                    if(words.contains(wordToCheck)){
+                        cache[length]=true;
+                        break;
+                    }
+                }
+            }
+        }
+
         return cache[input.length()];
     }
     

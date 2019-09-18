@@ -14,4 +14,11 @@ public class LC139Test {
         Assert.assertTrue(new LC139().wordBreak("applepenapple", Lists.newArrayList("apple","pen")));
         Assert.assertFalse(new LC139().wordBreak("catsandog", Lists.newArrayList("cats", "dog", "sand", "and", "cat")));
     }
+
+    @Test
+    public void wordBreakMyStyle() {
+        Assert.assertTrue(new LC139().wordBreakMyStyle("omtlab", Lists.newArrayList("omt","lab")));
+        Assert.assertTrue(new LC139().wordBreakMyStyle("applepenapple", Lists.newArrayList("apple","pen")));
+        Assert.assertFalse(new LC139().wordBreakMyStyle("catsandog", Lists.newArrayList("cats", "dog", "sand", "and", "cat")));
+    }
 }
