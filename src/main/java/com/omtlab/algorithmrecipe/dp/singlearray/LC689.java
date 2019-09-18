@@ -77,7 +77,7 @@ public class LC689 {
             currentSum+=input[index];
             if(index>=k_FromInput){
                 currentSum-=sum[index-k_FromInput];//Moving window of size k_FromInput 
-                // to right side by removing one integer from left side
+                // to right side by removing one integer[Last total] from left side
             }
             
             if(index>=k_FromInput-1){
