@@ -106,7 +106,7 @@ public class LC721 {
      * https://www.youtube.com/watch?v=wU6udHRIkcc
      */
     /**
-     * BELOW ALGO TAKES 72 ms faster than above due to path compression
+     * BELOW ALGO TAKES 72 ms which is faster than [584 ms] above due to path compression
      * @param accounts
      * @return
      */
