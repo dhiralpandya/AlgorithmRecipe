@@ -74,6 +74,7 @@ public class LC146 {
         LinkNode next;
         LinkNode pre;
         int value;
+        int key;
 
         LinkNode(){
             
@@ -126,13 +127,14 @@ public class LC146 {
             }else {
 
                 if (currentCount >= capacity) {
-                    mapIdNode.remove(tail.pre.value);
+                    mapIdNode.remove(tail.pre.key);
                     remove(tail.pre);
                     currentCount--;
                 }
 
                 LinkNode node = new LinkNode();
                 node.value = value;
+                node.key = key;
                 mapIdNode.put(key, node);
                 add(node);
 
