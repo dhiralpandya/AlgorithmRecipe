@@ -33,4 +33,57 @@ public class LC215 {
         //  not the kth distinct element.
       return nums[nums.length-k];
     }
+    
+    
+    public int getKthLargetWithQuickSort(int[] nums, int k){
+        
+        int kthElementFromLastInSortedArray = nums.length-k; //IMP Step
+        
+        int start = 0;
+        int end = nums.length-1;
+        
+        while (start <= end){
+            int lastEnd = quickSort(nums,start,end);
+            if(kthElementFromLastInSortedArray < lastEnd){
+                end = lastEnd-1;
+            } else if(kthElementFromLastInSortedArray > lastEnd){
+                start = lastEnd +1;
+            } else {
+                return nums[kthElementFromLastInSortedArray];
+            }
+        }
+        //Lets say [1,2,3] and we need 3rd largest element means length[3] - k[3] = 0 means end would be at 0
+        return nums[0];
+    }
+    
+    public int quickSort(int[] nums, int start, int end){
+        
+        
+        while (start < end){
+
+            int pivot = nums[(start+end)/2];
+            
+            while(nums[start] < pivot){
+                start++;
+            }
+            
+            while(nums[end] > pivot){
+                end--;
+            }
+            
+            if(start < end){
+                swap(start,end,nums);
+                //We have commented out below code to avoid issue with input {3,2,1,5,6,4}
+                //start++;
+                //end--;
+            }
+        }
+        return end;
+    }
+    
+    public void swap(int start, int end, int[] nums){
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+    }
 }

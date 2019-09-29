@@ -29,4 +29,13 @@ public class LC215Test {
         int[] b = {3,2,1,5,6,4};
         Assert.assertEquals(5,new LC215().getKthLargest(b,2));
     }
+
+    @Test
+    public void getKthLargetWithQuickSort() {
+        int[] a = {3,2,3,1,2,4,5,5,6};
+        Assert.assertEquals(4,new LC215().getKthLargetWithQuickSort(a,4));
+
+        int[] b = {3,2,1,5,6,4};
+        Assert.assertEquals(5,new LC215().getKthLargetWithQuickSort(b,2));
+    }
 }
