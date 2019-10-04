@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.tree.bfs;
+package com.omtlab.algorithmrecipe.tree.inorder;
 
 import com.google.common.collect.Lists;
 import com.omtlab.algorithmrecipe.common.node.TreeNode;
@@ -30,33 +30,8 @@ public class LC102 {
         List<List<Integer>> output = Lists.newArrayList();
 
         Map<Integer,List<Integer>> map = new HashMap<>();
-        
-        root.index = 0;
-        
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        
-        while (!queue.isEmpty()){
-            TreeNode current = queue.poll();
-            
-            List<Integer> l = map.getOrDefault(current.index,Lists.newArrayList());
-            l.add(current.integerValue);
-            map.put(current.index,l);
-            
-            TreeNode left = current.left;
-            TreeNode right = current.right;
-            
-            if(left != null){
-                left.index = current.index+1;
-                queue.add(left);
-            }
-            
-            if(right != null){
-                right.index = current.index+1;
-                queue.add(right);
-            }
-        }
+       
+        inorder(0,root,map);
         
         int totalKeys = map.keySet().size();
         int currentKey = 0;
@@ -69,6 +44,21 @@ public class LC102 {
         
     }
     
+    
+    public void inorder(int index, TreeNode node, Map<Integer,List<Integer>> map){
+        
+        if(node == null){
+            return;
+        }
+        
+        List<Integer> l = map.getOrDefault(index,Lists.newArrayList());
+        l.add(node.integerValue);
+        map.put(index,l);
+        
+        inorder(index+1,node.left, map);
+        inorder(index+1,node.right, map);
+        
+    } 
    
     
 }
