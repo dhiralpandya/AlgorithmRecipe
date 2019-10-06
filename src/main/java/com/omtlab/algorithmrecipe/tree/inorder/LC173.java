@@ -10,11 +10,11 @@ import java.util.Stack;
  *
  * Calling next() will return the next smallest number in the BST.
  *
- *
+ * 
  *
  * Example:
  *
- *
+ *  CHECK LC173.png in documentation
  *
  * BSTIterator iterator = new BSTIterator(root);
  * iterator.next();    // return 3

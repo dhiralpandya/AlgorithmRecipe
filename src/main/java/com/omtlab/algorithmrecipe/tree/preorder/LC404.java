@@ -18,6 +18,10 @@ import com.omtlab.algorithmrecipe.common.node.TreeNode;
  */
 public class LC404 {
     
+    //What is left leaves ????
+    // Left leaves means the left node which doesn't have left and right node. 
+    // Leaves means last node in tree. 
+    
     public int total(TreeNode root){
         if(root == null){
             return 0;
