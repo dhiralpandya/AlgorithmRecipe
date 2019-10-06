@@ -70,6 +70,9 @@ public class LC297 {
             
         }
         
+        
+        //REMOVING Extra nulls from the end. 
+        //[1,2,3,null,null,4,5,null,null]
         int count =0;
         for(count = output.size()-1;count>=0;count--){
             if(output.get(count) != null){
