@@ -97,6 +97,8 @@ public class LC10  {
                             && ((pattern.charAt(j-2)  == string.charAt(i-1))
                             || pattern.charAt(j-2) == '.')){
                         result[i][j] = result[i-1][j];
+                    } else if(previousPreviousValue){
+                        result[i][j] = true; 
                     }
                 } else {
                     result[i][j] = false;
