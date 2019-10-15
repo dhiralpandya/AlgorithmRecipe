@@ -1,5 +1,9 @@
 package com.omtlab.algorithmrecipe.array.map;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 554. Brick Wall
  * 
@@ -65,6 +69,42 @@ public class LC554 {
      * This fact is accounted for by incrementing the corresponding count value.
      * But, for every row, we consider the sum only upto the second last brick, since the last boundary isn't a valid boundary for the solution. 
      * 
+     * 
+     * HERE WE WILL TAKE SUM and COUNT Map 
+     * 
+     * SUM will tell us at which location we will get edge and how many edges will get for any perticular sum. 
+     * 
+     * Lets say SUM = 2 comes 3 times. It means there are three edges that we found, 
+     * So in above condition  line will not cross at least 3 edges, 
+     * so remaing line will cross SIZE_OF_WALL_ROW - 3 edges = RESULT
+     * 
+     * 
+     * 
      */
+    public int leastBricks(List<List<Integer>> wall) {
+
+        Map<Integer,Integer> sumCountMap = new HashMap<>();
+       //NOTE : We will skip last brick in each row since it doesn't matter
+       for(List<Integer> row:wall){
+           int sum = 0;
+           for(int i=0; i < row.size()-1; i++){//NOTE : We will skip last brick in each row since it doesn't matter
+               sum+=row.get(i);
+               int count = sumCountMap.containsKey(sum)?sumCountMap.get(sum)+1:1;
+               sumCountMap.put(sum,count);
+           }
+       }
+
+
+        //so remaing line will cross SIZE_OF_WALL_ROW - 3 edges = RESULT
+        int SIZE_OF_WALL_ROW = wall.size();
+        int result = wall.size();
+
+        for(int key : sumCountMap.keySet()){
+            result = Math.min(result,SIZE_OF_WALL_ROW - sumCountMap.get(key));
+        }
+
+        return result; 
+        
+    }
 
 }
