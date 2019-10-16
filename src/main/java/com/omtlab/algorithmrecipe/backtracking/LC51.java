@@ -55,6 +55,7 @@ public class LC51 {
             List<Integer> list = new ArrayList<>();
             Arrays.stream(result).forEach(i->list.add(i));
             output.add(list);
+            return;
         } 
         
         
