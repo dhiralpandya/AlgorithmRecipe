@@ -1,5 +1,8 @@
 package com.omtlab.algorithmrecipe.backtracking;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -43,21 +46,104 @@ public class LC51 {
     //Just see this video first, 
     //https://www.youtube.com/watch?v=xFv_Hl4B83A
 
-    public List<List<String>> solveNQueens(int n) {
+    public List<List<Integer>> solveNQueensIntegerOutput(int n) {
         
+        int[] result = new int[n];
+        Arrays.fill(result,-1);//IMP Step
+        List<List<Integer>> output = Lists.newArrayList();
+        Set<Integer> visitedColumns = Sets.newHashSet();
+        runBacktracking(n,result,0,visitedColumns,output);
         
-        return null;
+        return output;
         
     }
+
+    public List<List<String>> solveNQueens(int n) {
+
+        int[] result = new int[n];
+        Arrays.fill(result,-1);//IMP Step
+        List<List<Integer>> output = Lists.newArrayList();
+        Set<Integer> visitedColumns = Sets.newHashSet();
+        runBacktracking(n,result,0,visitedColumns,output);
+
+        List<List<String>> stringOutput = Lists.newArrayList();
+        
+        for(List<Integer> intList:output){
+            List<String> ls = Lists.newArrayList();
+            for(Integer position:intList){
+                StringBuilder sb = new StringBuilder();
+                
+                for(int i=0; i < n;i++){
+                    if(i == position){
+                        sb.append("Q");
+                    } else {
+                        sb.append(".");
+                    }
+                }
+                ls.add(sb.toString());
+            }
+            stringOutput.add(ls);
+        }
+        
+        return stringOutput;
+
+    }
     
-    public void runBacktracking(int n, int[] result, int row, int column, Set<Integer> visitedColumns, List<List<Integer>> output){
+    public void runBacktracking(int n, int[] result, int row, Set<Integer> visitedColumns, List<List<Integer>> output){
         if(row == n){
             List<Integer> list = new ArrayList<>();
             Arrays.stream(result).forEach(i->list.add(i));
             output.add(list);
             return;
         } 
+        for(int col = 0; col < n; col++) {
+            if (validatePosition(n, result, row,col, visitedColumns)) {
+                visitedColumns.add(col);
+                result[row] = col;
+                runBacktracking(n, result, row + 1, visitedColumns, output);
+                visitedColumns.remove(col);
+                result[row] = -1;
+            }
+        }
+        
+        return;
+    }
+    
+    public boolean validatePosition(int n,int[] result, int row, int column, Set<Integer> visitedColumn){
+        
+        if(visitedColumn.contains(column)){
+            return false;
+        }
+        
+        //Validate diagonal 
+        
+        //Move top left
+        int top = row-1;
+        int left = column-1;//This is attack position
+        while(top >=0 && left >=0){
+            int columnAtRow = result[top];
+            if(columnAtRow == left){//attack possible
+                return false;
+            }
+            top--;
+            left--;
+        }
+        
+        //Move Top Right
+        top = row-1;
+        int right = column+1;//This is attack position
+        while(top >= 0 && right < n){
+         
+            int columnAtRow = result[top];
+            if(columnAtRow == right){//attack possible
+                return false;
+            }
+            
+            top--;
+            right++;
+        }
         
         
+        return true;
     }
 }
