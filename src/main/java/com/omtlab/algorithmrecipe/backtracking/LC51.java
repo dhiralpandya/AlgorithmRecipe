@@ -101,8 +101,8 @@ public class LC51 {
                 visitedColumns.add(col);
                 result[row] = col;
                 runBacktracking(n, result, row + 1, visitedColumns, output);
-                visitedColumns.remove(col);
-                result[row] = -1;
+                visitedColumns.remove(col); //Backtracking
+                result[row] = -1; //Backtracking
             }
         }
         
