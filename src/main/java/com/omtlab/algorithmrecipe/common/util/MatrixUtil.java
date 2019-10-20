@@ -18,6 +18,11 @@ public class MatrixUtil {
             for(Object o:l){
                 sb.append(String.valueOf(o)+",");
             }
+            
+            if(sb.length() > 2){
+                sb.deleteCharAt(sb.length()-1);    
+            }
+            
             sb.append("]\n");
         }
 
