@@ -31,8 +31,8 @@ public class LC477 {
      * Not at position ZERO[0] all integer has 0, Means we have Five 0 and Zero 1 
      * So total of different digits at position zero is Sum = 5[Zeros] * 0[Ones] = 0
      * 
-     * Now lets move to position One. We have Three 0 and Two 1. 
-     * So total of different digits at position one is Sum = 3[Zero] * 2[One] = 6 (Here each 1 will get two 0, So total we have 3 ones means 6 combination)
+     * Now lets move to position One. We have Three 1 and Two 2. 
+     * So total of different digits at position one is Sum = 3[One] * 2[Zero] = 6 (Here each 1 will get two 0, So total we have 3 ones means 6 combination)
      * 
      * 
      * 

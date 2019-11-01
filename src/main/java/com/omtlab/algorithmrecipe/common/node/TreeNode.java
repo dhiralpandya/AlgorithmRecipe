@@ -5,6 +5,7 @@ public class TreeNode {
     public Integer integerValue;
     public TreeNode left;
     public TreeNode right;
+    public TreeNode next;// For LC 117. Populating Next Right Pointers in Each Node II
     public Integer index;
 
     public TreeNode(){
