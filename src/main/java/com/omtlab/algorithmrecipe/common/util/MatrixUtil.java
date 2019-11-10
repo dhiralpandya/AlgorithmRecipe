@@ -10,6 +10,12 @@ public class MatrixUtil {
             System.out.println(Arrays.toString(i));
         }
     }
+
+    public static void printMatrix(char[][] input){
+        for(char[] i:input){
+            System.out.println(Arrays.toString(i));
+        }
+    }
     
     public static <T> void printListOfList(List<List<T>> listOfList){
         StringBuilder sb = new StringBuilder();
