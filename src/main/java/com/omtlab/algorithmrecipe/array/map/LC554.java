@@ -106,5 +106,26 @@ public class LC554 {
         return result; 
         
     }
+    
+    
+    public int leastBricksSimple(List<List<Integer>> wall){
+
+        int WALL_HEIGHT = wall.size();
+        int result = WALL_HEIGHT;
+        
+        Map<Integer,Integer> sumCountMap = new HashMap<>();
+        //NOTE : We will skip last brick in each row since it doesn't matter
+        for(List<Integer> row:wall){
+            int sum = 0;
+            for(int i=0; i < row.size()-1; i++){//NOTE : We will skip last brick in each row since it doesn't matter
+                sum+=row.get(i);
+                int count = sumCountMap.containsKey(sum)?sumCountMap.get(sum)+1:1;
+                sumCountMap.put(sum,count);
+                result = Math.min(result,WALL_HEIGHT-count);
+            }
+        } 
+        
+        return result;
+    }
 
 }
