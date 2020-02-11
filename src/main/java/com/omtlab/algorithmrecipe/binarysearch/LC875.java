@@ -50,11 +50,11 @@ public class LC875 {
         while(start <= end){
             int mid = (start+end)/2;
             int totalHr = getTotalHrTakesForCurrentMid(mid,piles,H);
-            if(totalHr > H){ //Here K is too small, Eating speed is too low.
+            if(totalHr > H){ //Here H is too small, Eating speed is too low.
                 start = mid+1;
-                output=mid;
-            } else { // K is bigger, Easting speed too fast.
+            } else { // H is bigger, Easting speed too fast.
                 end = mid-1;
+                output=mid;
             }
         }
         
@@ -68,7 +68,10 @@ public class LC875 {
         int totalHr = 0;
         
         for(int pile:piles) {
-            totalHr+= (pile/mid) +1;
+            totalHr+= (pile/mid);
+            if(pile%mid != 0) {
+                totalHr++;
+            }
         }
         
         return totalHr;
