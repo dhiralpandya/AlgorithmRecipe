@@ -21,6 +21,8 @@ import java.util.List;
  * Note:
  *
  * Although the above answer is in lexicographical order, your answer could be in any order you want.
+ *
+ * Check Image in documentation with name LC17.png
  */
 public class LC17 {
 
