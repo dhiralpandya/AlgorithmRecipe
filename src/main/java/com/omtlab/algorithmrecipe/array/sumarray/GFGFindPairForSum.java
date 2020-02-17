@@ -41,6 +41,27 @@ public class GFGFindPairForSum {
         }
         
         return Lists.newArrayList(one,two);
-    } 
-    
+    }
+
+    public List<Integer> findPairDiff(Integer[] input, int sum){
+        Map<Integer,Integer> sumAndIndex = new TreeMap<>();
+        int one=-1;
+        int two = -1;
+
+
+        for(int i =0; i<input.length;i++){
+            int sumKey = sum - input[i];
+            int currentInt = input[i];
+            if(sumAndIndex.containsKey(sumKey)){
+                one = sumAndIndex.get(sumKey);
+                two = i;
+                break;
+            } else {
+                sumAndIndex.put(currentInt,i);
+            }
+        }
+
+        return Lists.newArrayList(one,two);
+    }
+
 }

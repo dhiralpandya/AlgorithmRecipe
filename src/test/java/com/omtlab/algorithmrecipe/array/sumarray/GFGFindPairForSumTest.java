@@ -41,4 +41,9 @@ public class GFGFindPairForSumTest {
     public void findPair() {
         Assert.assertEquals(output,gfgFindPairForSum.findPair(input,sum));
     }
+
+    @Test
+    public void findPairDiff() {
+        Assert.assertEquals(output,gfgFindPairForSum.findPairDiff(input,sum));
+    }
 }
