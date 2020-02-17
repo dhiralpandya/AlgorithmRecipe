@@ -40,6 +40,13 @@ public class LC461 {
         }
         return distance;
     }
+
+    public int fasterHammingDistanceUsingLC191(int x, int y) {
+
+        int xor = x^y;
+
+        return new LC191().hammingWeight(xor);
+    }
     
     public int hammingDistance(int x, int y) {
 

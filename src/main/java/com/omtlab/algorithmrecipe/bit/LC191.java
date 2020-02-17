@@ -65,6 +65,11 @@ public class LC191 {
     /**
      * NOTE : How to flip the least-significant 1-bit to 0
      * Here is the equation : N & N-1 will change least significant 1 bit to 0
+     *
+     * Example :
+     * 3 = 0011
+     * 3-1 is 2 = 0010
+     * now 3&=(3-1) = 0010
      */
 
     public int hammingWeight(int n) {
