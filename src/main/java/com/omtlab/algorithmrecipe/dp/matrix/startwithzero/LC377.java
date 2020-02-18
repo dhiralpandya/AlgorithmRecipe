@@ -66,7 +66,28 @@ public class LC377 {
      * 2 1 1 2 3 5
      * 3 1 1 2 4 7
      * 
-     * 
+     * How to think about this problem.
+     *
+     * Since we are using DP. Divide the problem in to small parts
+     *
+     * Lets say we have one number in array and target is also one.
+     * nums = [1] , target = 1
+     * So possible output would be {1} only one
+     *
+     * Now nums = [1,2] and target = 1
+     * Same output {1}
+     *
+     * Now nums = [1,2] and target = 2
+     * There are two output = {1,1} and {2}
+     *
+     * Here we will use previously calculated value to get our ans.
+     *
+     * Here we will do 2-2 = 0 to get value from [row][0] which is 1
+     * Now we will take previous value to get count from there,
+     * previous value is 1 so 2-1 = 1 to get value from [row][1] is 1
+     *
+     * So total 1+1 = 2
+     *
      */
     public int combinationSum4(int[] nums, int target) {
 
