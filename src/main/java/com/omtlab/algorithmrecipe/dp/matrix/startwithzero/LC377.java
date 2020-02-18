@@ -68,6 +68,9 @@ public class LC377 {
      * 
      * How to think about this problem.
      *
+     * Here by looping through the currentRow to 0 means
+     * we are trying each target with all  from nums at currentNum to nums at 0
+     *
      * Since we are using DP. Divide the problem in to small parts
      *
      * Lets say we have one number in array and target is also one.
