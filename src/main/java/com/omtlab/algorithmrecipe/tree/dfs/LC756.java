@@ -79,7 +79,9 @@ public class LC756 {
         if(newRow.length() == row.length()-1) {  
             return dfs(newRow, "", 1, baseToTop);
         }
-        ;
+        // subStringIndex-1,subStringIndex+1 is like sliding one char to right.
+        // We can also pass 0 as subStringIndex and
+        // do substring from -> subStringIndex to -> subStringIndex+2
         for(char c: baseToTop.getOrDefault(row.substring(subStringIndex-1,subStringIndex+1), new HashSet<>())) {
             // IMP Step
             if(dfs(row, newRow+c, subStringIndex+1,baseToTop)) {
