@@ -3,3 +3,9 @@ ASCII Table
 0 to 9 = 48 to 57
 A to Z = 65 to 90
 a to z = 97 to 122
+
+
+Todo
+953. Verifying an Alien Dictionary
+42. Trapping Rain Water
+5. 	Longest Palindromic Substring

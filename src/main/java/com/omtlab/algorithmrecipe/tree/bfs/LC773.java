@@ -97,7 +97,7 @@ public class LC773 {
                 return n.level;
             }
             int nextLevel = n.level+1;
-            int i = n.pattern.indexOf("0");
+            int i = n.pattern.indexOf("0"); // IMP Step
             for(int j:validSwap[i]) {
                 String next = swap(n.pattern, i, j);
                 if(!visitedNode.contains(next)) {
