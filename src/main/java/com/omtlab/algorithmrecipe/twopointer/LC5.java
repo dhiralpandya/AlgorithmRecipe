@@ -1,6 +1,6 @@
 package com.omtlab.algorithmrecipe.twopointer;
 
-import javafx.util.Pair;
+import com.omtlab.algorithmrecipe.common.util.Pair;
 
 /**
  * 5. Longest Palindromic Substring

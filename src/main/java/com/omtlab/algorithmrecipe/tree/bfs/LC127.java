@@ -1,7 +1,7 @@
 package com.omtlab.algorithmrecipe.tree.bfs;
 
 import com.google.common.collect.Lists;
-import javafx.util.Pair;
+import com.omtlab.algorithmrecipe.common.util.Pair;
 
 import java.util.*;
 
