@@ -26,18 +26,18 @@ public class LC209 {
         }
         
         int minSize = Integer.MAX_VALUE;
-        int currentSize = nums[0];
+        int currentSum = nums[0];
         
         int j=0;
         for(int i =1; i< nums.length; i++){
-            currentSize+=nums[i];
+            currentSum+=nums[i];
             
-            while(currentSize > s && j<=i){
-                currentSize-=nums[j];
+            while(currentSum > s && j<=i){
+                currentSum-=nums[j];
                 j++;
             }
             
-            if(currentSize == s){
+            if(currentSum == s){
                 minSize=Math.min(minSize,i-j+1);
             }
 
