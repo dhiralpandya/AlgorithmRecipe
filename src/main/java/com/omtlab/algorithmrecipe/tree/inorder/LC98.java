@@ -1,7 +1,6 @@
 package com.omtlab.algorithmrecipe.tree.inorder;
 
 import com.omtlab.algorithmrecipe.common.node.TreeNode;
-import org.omg.CORBA.TRANSACTION_MODE;
 
 import java.util.Stack;
 
