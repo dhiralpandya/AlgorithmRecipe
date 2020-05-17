@@ -100,7 +100,7 @@ public class LC430 {
             while (child != null) {
                 stack.push(child);
                 Node tempChild = child.child;
-                child.child = null; // This is IMP step to avoid cycle. 
+                child.child = null; // This is IMP step to avoid cycle.
                 child = tempChild;
 
             }
