@@ -7,6 +7,14 @@
         └── algorithmrecipe
             ├── App.java
             ├── array
+            │   ├── binarysearch
+            │   │   └── rotated
+            │   │       ├── LC153.java
+            │   │       ├── LC154.java
+            │   │       ├── LC33.java
+            │   │       └── LC81.java
+            │   ├── continuous
+            │   │   └── LC560.java
             │   ├── GFGFindFirstDuplicate.java
             │   ├── KthSmalletsElement.java
             │   ├── LC13.java
@@ -21,12 +29,6 @@
             │   ├── LC75.java
             │   ├── LC88.java
             │   ├── LC953.java
-            │   ├── binarysearch
-            │   │   └── rotated
-            │   │       ├── LC153.java
-            │   │       ├── LC154.java
-            │   │       ├── LC33.java
-            │   │       └── LC81.java
             │   ├── map
             │   │   ├── LC398.java
             │   │   └── LC554.java
@@ -72,6 +74,7 @@
             │   └── util
             │       ├── MatrixUtil.java
             │       ├── NodeUtil.java
+            │       ├── Pair.java
             │       └── TreeUtil.java
             ├── design
             │   └── using
@@ -98,11 +101,11 @@
             │   │       ├── LC377.java
             │   │       └── LC647.java
             │   └── singlearray
+            │       ├── hardtounderstand
+            │       │   └── LC714.java
             │       ├── LC43.java
             │       ├── LC689.java
             │       ├── LC91.java
-            │       ├── hardtounderstand
-            │       │   └── LC714.java
             │       └── startwithzero
             │           ├── LC139.java
             │           ├── LC494.java
@@ -125,15 +128,18 @@
             │       └── LC173_Copy.java
             ├── linkedlist
             │   ├── LC146.java
-            │   └── LC206.java
+            │   ├── LC206.java
+            │   └── LC430.java
             ├── math
-            │   └── LC166.java
+            │   ├── LC166.java
+            │   └── LC273.java
             ├── matrix
             │   └── bfs
             │       ├── GFGShortDistMrx.java
             │       ├── LC200.java
             │       └── LC286.java
             ├── recursion
+            │   ├── LC301.java
             │   ├── LC39.java
             │   ├── LC494.java
             │   └── map
@@ -149,6 +155,7 @@
             │   └── LC98.java
             ├── string
             │   ├── LC28.java
+            │   ├── LC387.java
             │   ├── LC38.java
             │   ├── LC647.java
             │   └── map
@@ -159,6 +166,7 @@
             │       └── LC49Prime.java
             ├── tree
             │   ├── bfs
+            │   │   ├── LC101.java
             │   │   ├── LC102.java
             │   │   ├── LC127.java
             │   │   ├── LC133.java
@@ -179,7 +187,8 @@
             │   │   ├── LC285.java
             │   │   └── LC98.java
             │   ├── preorder
-            │   │   └── LC404.java
+            │   │   ├── LC404.java
+            │   │   └── LC572.java
             │   └── topological
             │       ├── LC269.java
             │       └── LC953.java
@@ -194,9 +203,12 @@
                 ├── LC209.java
                 ├── LC42.java
                 ├── LC5.java
+                ├── LC647.java
                 ├── LC680.java
                 ├── LC755.java
-                └── LC76.java
+                ├── LC76.java
+                └── LC860.java
 
-51 directories, 144 files
+52 directories, 154 files
+
 ```
