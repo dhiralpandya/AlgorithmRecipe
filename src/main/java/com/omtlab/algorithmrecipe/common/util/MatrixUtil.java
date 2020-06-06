@@ -11,6 +11,12 @@ public class MatrixUtil {
         }
     }
 
+    public static void printMatrix(Integer[][] input){
+        for(Integer[] i:input){
+            System.out.println(Arrays.toString(i));
+        }
+    }
+
     public static void printMatrix(char[][] input){
         for(char[] i:input){
             System.out.println(Arrays.toString(i));

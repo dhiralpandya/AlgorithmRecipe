@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array;
+package com.omtlab.algorithmrecipe.array.quicksort;
 
 import java.util.Arrays;
 import java.util.Collections;
