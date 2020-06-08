@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array.quicksort;
+package com.omtlab.algorithmrecipe.quicksort;
 
 /**
  * Please check LC215 for largest element

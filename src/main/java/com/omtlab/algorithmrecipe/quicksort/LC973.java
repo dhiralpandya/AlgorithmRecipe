@@ -1,6 +1,5 @@
-package com.omtlab.algorithmrecipe.array.quicksort;
+package com.omtlab.algorithmrecipe.quicksort;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
 import java.util.List;

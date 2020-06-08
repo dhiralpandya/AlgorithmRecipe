@@ -1,8 +1,6 @@
-package com.omtlab.algorithmrecipe.array.quicksort;
+package com.omtlab.algorithmrecipe.quicksort;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.PriorityQueue;
 
 /**
  * 215. Kth Largest Element in an Array

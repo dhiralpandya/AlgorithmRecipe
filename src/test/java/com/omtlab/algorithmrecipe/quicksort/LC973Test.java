@@ -1,10 +1,8 @@
-package com.omtlab.algorithmrecipe.array.quicksort;
+package com.omtlab.algorithmrecipe.quicksort;
 
 import com.omtlab.algorithmrecipe.common.util.MatrixUtil;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

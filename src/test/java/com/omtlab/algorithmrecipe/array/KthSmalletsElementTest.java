@@ -1,6 +1,6 @@
 package com.omtlab.algorithmrecipe.array;
 
-import com.omtlab.algorithmrecipe.array.quicksort.KthSmalletsElement;
+import com.omtlab.algorithmrecipe.quicksort.KthSmalletsElement;
 import org.junit.Assert;
 import org.junit.Test;
 
