@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * Dijkstra’s shortest path algorithm
- * 
+ *
+ * Check image GFGShortestPath.jpg in documentation for input related details.
  * https://www.youtube.com/watch?v=XB4MIexjvY0&t=327s
  * 
  */
@@ -15,7 +16,7 @@ public class GFGShortestPath {
         boolean[] visitedNode = new boolean[graph.length];
 
         Arrays.fill(calculatedDistance, Integer.MAX_VALUE);
-        calculatedDistance[src] = 0;
+        calculatedDistance[src] = 0; // This will help to trigger src node index while executing findMinDistanceNode method.
         for(int treeLevel=0; treeLevel < graph.length-1; treeLevel++) {
             
             int u = findMinDistanceNode(calculatedDistance, visitedNode);
