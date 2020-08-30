@@ -7,14 +7,6 @@
         └── algorithmrecipe
             ├── App.java
             ├── array
-            │   ├── binarysearch
-            │   │   └── rotated
-            │   │       ├── LC153.java
-            │   │       ├── LC154.java
-            │   │       ├── LC33.java
-            │   │       └── LC81.java
-            │   ├── continuous
-            │   │   └── LC560.java
             │   ├── GFGFindFirstDuplicate.java
             │   ├── LC13.java
             │   ├── LC238.java
@@ -28,15 +20,28 @@
             │   ├── LC88.java
             │   ├── LC953.java
             │   ├── LC977.java
+            │   ├── binarysearch
+            │   │   ├── LC278.java
+            │   │   └── rotated
+            │   │       ├── LC153.java
+            │   │       ├── LC154.java
+            │   │       ├── LC33.java
+            │   │       └── LC81.java
+            │   ├── continuous
+            │   │   └── LC560.java
             │   ├── map
             │   │   ├── LC398.java
             │   │   └── LC554.java
+            │   ├── slidingwindow
+            │   │   └── LC438.java
             │   └── sumarray
             │       ├── GFGFindPairForSum.java
             │       ├── LC121.java
             │       ├── LC325.java
             │       ├── LC523.java
-            │       └── LC636.java
+            │       ├── LC560.java
+            │       ├── LC636.java
+            │       └── package-info.java
             ├── backtracking
             │   ├── LC17.java
             │   ├── LC200Copy.java
@@ -100,11 +105,11 @@
             │   │       ├── LC377.java
             │   │       └── LC647.java
             │   └── singlearray
-            │       ├── hardtounderstand
-            │       │   └── LC714.java
             │       ├── LC43.java
             │       ├── LC689.java
             │       ├── LC91.java
+            │       ├── hardtounderstand
+            │       │   └── LC714.java
             │       └── startwithzero
             │           ├── LC139.java
             │           ├── LC494.java
@@ -115,7 +120,11 @@
             │   ├── LC721.java
             │   └── LC785.java
             ├── greedy
+            │   ├── GFGMinNoofPlatformsRequired.java
+            │   ├── GFGMinNoofPlatformsRequiredUsingMap.java
             │   ├── LC218.java
+            │   ├── LC253.java
+            │   ├── LC253UsingMap.java
             │   ├── LC56.java
             │   ├── LC57.java
             │   └── LC759.java
@@ -160,8 +169,8 @@
             │   └── LC98.java
             ├── string
             │   ├── LC28.java
-            │   ├── LC387.java
             │   ├── LC38.java
+            │   ├── LC387.java
             │   ├── LC647.java
             │   └── map
             │       ├── GFGAnagramSubstringSearch.java
@@ -175,6 +184,7 @@
             │   │   ├── LC102.java
             │   │   ├── LC127.java
             │   │   ├── LC133.java
+            │   │   ├── LC199.java
             │   │   ├── LC297.java
             │   │   ├── LC314.java
             │   │   └── LC773.java
@@ -216,6 +226,7 @@
                 ├── LC76.java
                 └── LC860.java
 
-54 directories, 159 files
+55 directories, 168 files
+
 
 ```
