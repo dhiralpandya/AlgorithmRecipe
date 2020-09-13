@@ -41,6 +41,26 @@ import java.util.Stack;
 public class LC636 {
 
     /**
+     * Read problem carefully and understand it first.
+     *
+     * Here are some point to consider.
+     * 1. It is one threaded application
+     * 2. Only one function execution at a time.
+     * 3. Execution starts with One function (I would say entry level function)
+     * 4. Entry level function will going to call other functions (I would say child functions)
+     * 5. Since it is one threaded application and one function execution at a time.
+     * Here is the input we will get
+     *   - [ENTRY_FN_START,
+     *       CHILD_FN1_START,
+     *         CHILD_FN1.1_START,
+     *         CHILD_FN1.1_END,
+     *       CHILD_FN1_END,
+     *       CHILD_FN2_START,
+     *       CHILD_FN2_END,
+     *     ENTRY_FN_END]
+     */
+
+    /**
      * Before starting off with the solution,
      * let's discuss a simple idea.
      * Suppose we have three functions func_1func func_2func and func_3func
