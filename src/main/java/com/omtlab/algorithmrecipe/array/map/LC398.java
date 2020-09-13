@@ -1,8 +1,12 @@
 package com.omtlab.algorithmrecipe.array.map;
 
 import com.google.common.collect.Lists;
+import com.omtlab.algorithmrecipe.common.model.KeyValueImpl;
+import org.apache.commons.collections4.KeyValue;
 
+import java.sql.Array;
 import java.util.*;
+import java.util.stream.IntStream;
 
 /**
  * 398. Random Pick Index
@@ -27,31 +31,25 @@ public class LC398 {
 
     int[] nums=null;
     private Map<Integer, List<Integer>> intPositionMap = new HashMap<>();
-    int countToStart = 0;
     Random random = new Random();
     
     
     public LC398(int[] nums) {
-        Arrays.sort(nums);//IMP Step
         this.nums = nums;
     }
 
     public int pick(int target) {
-        int i = countToStart;
-        
-        while(i<nums.length && !intPositionMap.containsKey(target)){
-                    
-            intPositionMap.put(nums[i],Lists.newArrayList());
-            while ( i < nums.length && intPositionMap.containsKey(nums[i])){
-                intPositionMap.get(nums[i]).add(i);
-                i++;
+
+        if(!intPositionMap.containsKey(target)){
+            for(int i = 0; i < nums.length; i++) {
+                if(target == nums[i]) {
+                    List<Integer> positions = intPositionMap.getOrDefault(target, Lists.newArrayList());
+                    positions.add(i);
+                    intPositionMap.put(target, positions);
+                }
             }
-        
         }
 
-        countToStart = i;    
-        
-        
         List<Integer> allPosition = intPositionMap.get(target);
         return allPosition.get(random.nextInt(allPosition.size()));
     }
