@@ -1,9 +1,8 @@
 package com.omtlab.algorithmrecipe.array;
 
+import com.omtlab.algorithmrecipe.twopointer.LC88;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC88Test {
 

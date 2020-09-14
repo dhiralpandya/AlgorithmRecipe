@@ -1,10 +1,9 @@
 package com.omtlab.algorithmrecipe.array;
 
+import com.omtlab.algorithmrecipe.quicksort.LC324;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 public class LC324Test {
 

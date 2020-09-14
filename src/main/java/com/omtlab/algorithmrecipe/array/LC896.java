@@ -49,6 +49,8 @@ public class LC896 {
         int consistency = 0;
         for (int index = 0; index < a.length - 1; index++) {
             int compare = compare(a[index], a[index + 1]);
+            // No need to change consistency for duplicate integers.
+            // Ex: [1,2,2,3] here 2 is duplicate.
             if (compare != 0) {
                 if (compare != consistency && consistency != 0) {
                     return false;

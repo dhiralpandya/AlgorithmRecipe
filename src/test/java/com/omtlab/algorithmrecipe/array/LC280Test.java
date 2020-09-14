@@ -1,9 +1,8 @@
 package com.omtlab.algorithmrecipe.array;
 
+import com.omtlab.algorithmrecipe.array.evenodd.LC280;
 import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC280Test {
 

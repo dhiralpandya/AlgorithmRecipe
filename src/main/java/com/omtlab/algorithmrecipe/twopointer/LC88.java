@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array;
+package com.omtlab.algorithmrecipe.twopointer;
 
 /**
  * 88. Merge Sorted Array
@@ -19,6 +19,9 @@ package com.omtlab.algorithmrecipe.array;
  */
 public class LC88 {
 
+    /**
+     * Just remember we have to start from end for both input array and no swapping required here.
+     */
     public void mergeOptimal(int[] num1,int m, int[] num2,int n) {
         int i = m-1;
         int j = n-1;

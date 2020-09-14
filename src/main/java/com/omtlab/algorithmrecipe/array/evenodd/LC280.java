@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array;
+package com.omtlab.algorithmrecipe.array.evenodd;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -16,7 +16,8 @@ public class LC280 {
 
     /**
      * Approach #2 (One-pass Swap) [Accepted]
-     * Intuitively, we should be able to reorder it in one-pass. As we iterate through the array, we compare the current element to its next element and if the order is incorrect, we swap them.
+     * Intuitively, we should be able to reorder it in one-pass.
+     * As we iterate through the array, we compare the current element to its next element and if the order is incorrect, we swap them.
      */
     public void wiggleSort(int[] nums) {
 

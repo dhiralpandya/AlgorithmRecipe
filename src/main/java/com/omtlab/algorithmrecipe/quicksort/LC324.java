@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array;
+package com.omtlab.algorithmrecipe.quicksort;
 
 /**
  * 324. Wiggle Sort II
@@ -58,6 +58,14 @@ public class LC324 {
          * (2) elements larger than the 'median' are put into the first odd slots
          *
          * (3) the medians are put into the remaining slots.
+         */
+
+        /**
+         * Why are we starting Odd From first and Even from last ????
+         *  - Because it could possible that there are duplicate medians
+         *  - If we start both from First then at the end all medians will be in secuence position
+         *  - Something like this: [1,3,1,5,2,2]
+         *
          */
         int firstOddForLarger = 1;
         int lastEvenForSmaller = nums.length%2==0?nums.length-2:nums.length-1;
