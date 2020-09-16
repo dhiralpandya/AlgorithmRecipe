@@ -34,9 +34,16 @@ public class LC325 {
 
     /**
      * We will use below equation. 
-     * Sum1 - Sum2 = K
+     * Sum1 + Sum2 = K
      * Sum2 = Sum1-K
-     * 
+     *
+     * This is similar to LC560, Lets say a1+a2+a3 = K,
+     * Now in our input, b1+a1+a2+a3 = Sum
+     *
+     * So Sum-K = b1 because a1+a2+a3 = K
+     *
+     * SO length is currentIndex - indexOfb1
+     *
      * @param n
      * @param k
      * @return
