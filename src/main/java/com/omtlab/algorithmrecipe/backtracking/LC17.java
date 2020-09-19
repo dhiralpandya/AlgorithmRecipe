@@ -1,5 +1,7 @@
 package com.omtlab.algorithmrecipe.backtracking;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 /*
     Companies : [FACEBOOK]
@@ -46,5 +48,21 @@ public class LC17 {
             }
         }
         
+    }
+
+    public void indexBasedSolution(String input, int currentIndex, String currentString, List<String> output) {
+        if(currentIndex == input.length()) {
+            output.add(currentString);
+            return;
+        }
+
+        String pattern = digits2Letters[input.charAt(currentIndex) - '0'];
+        if(StringUtils.isEmpty(pattern)) {
+            indexBasedSolution(input, currentIndex+1, currentString, output);
+        } else {
+            for (char c : pattern.toCharArray()) {
+                indexBasedSolution(input, currentIndex + 1, currentString + c, output);
+            }
+        }
     }
 }

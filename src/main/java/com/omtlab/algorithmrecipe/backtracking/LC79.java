@@ -36,70 +36,124 @@ public class LC79 {
          
          return false;
     }
-    
-    
-    public boolean dfs(char[][] board, String word, int wordIndex, int row, int column, boolean[][] visited){
-        if(wordIndex == word.length()){
+
+
+    public boolean dfs(char[][] board,
+                       String word,
+                       int wordIndex,
+                       int row,
+                       int column,
+                       boolean[][] visited){
+
+        if(wordIndex == word.length()) {
             return true;
         }
-        
-        if(word.charAt(wordIndex) != board[row][column]){
+
+
+        if(isValidCell(board, word, wordIndex, row, column, visited)) {
+            visited[row][column] = true;
+
+            if(dfs(board, word, wordIndex+1, row+1, column, visited)
+                    || dfs(board, word, wordIndex+1, row-1, column, visited)
+                    || dfs(board, word, wordIndex+1, row, column+1, visited)
+                    || dfs(board, word, wordIndex+1, row, column-1, visited)) {
+                return true;
+            }
+
+            visited[row][column] = false; // Backtracking, Clearing the visited for next recursion
+        }
+
+        return false;
+    }
+
+    public boolean isValidCell(char[][] board,
+                               String word,
+                               int wordIndex,
+                               int row,
+                               int column,
+                               boolean[][] visited) {
+
+        if(row < 0 || column < 0 || row >= board.length || column >= board[0].length) {
             return false;
         }
-        
-        
-        int nextChar = wordIndex+1;
-        if(nextChar == word.length()){ // No need to do dfs here, Just return true. 
-            return true;
-        }
-        
-        visited[row][column] = true; // Setting up flag
 
-        boolean anyOfFourSideIsTrue = false;//Check if any of top, bottom, left or right is true.
-        
-        //Top
-        if(isValidCell(row-1,column,visited,board.length,board[row].length) 
-                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row-1,column,visited) ){
-            anyOfFourSideIsTrue = true;
-        }
-
-        
-        //Bottom
-        if(isValidCell(row+1,column,visited,board.length,board[row].length)
-                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row+1,column,visited)){
-            anyOfFourSideIsTrue = true;
-        }
-
-        //Left
-        if(isValidCell(row,column-1,visited,board.length,board[row].length)
-                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row,column-1,visited)){
-            anyOfFourSideIsTrue = true;
-        }
-
-        //Right
-        if(isValidCell(row,column+1,visited,board.length,board[row].length)
-                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row,column+1,visited)){
-            anyOfFourSideIsTrue = true;
-        }
-
-
-        visited[row][column] = false; //Backtracking, Clearing the visited for next recursion
-        
-        return anyOfFourSideIsTrue;
-
-    }
-    
-    
-    boolean isValidCell(int row, int column, boolean[][] visited, int maxRow, int maxColumn){
-        
-        if(row < 0
-                || column < 0
-                || row >=maxRow
-                || column>=maxColumn){
+        if(visited[row][column]) {
             return false;
         }
-        //True if  NOT VISITED 
-        return !visited[row][column]; // MOST IMP Line
+
+        if(board[row][column] != word.charAt(wordIndex)) {
+            return false;
+        }
+
+        return true;
     }
+
+
+
+
+//
+//    public boolean dfs(char[][] board, String word, int wordIndex, int row, int column, boolean[][] visited){
+//        if(wordIndex == word.length()){
+//            return true;
+//        }
+//
+//        if(word.charAt(wordIndex) != board[row][column]){
+//            return false;
+//        }
+//
+//
+//        int nextChar = wordIndex+1;
+//        if(nextChar == word.length()){ // No need to do dfs here, Just return true.
+//            return true;
+//        }
+//
+//        visited[row][column] = true; // Setting up flag
+//
+//        boolean anyOfFourSideIsTrue = false;//Check if any of top, bottom, left or right is true.
+//
+//        //Top
+//        if(isValidCell(row-1,column,visited,board.length,board[row].length)
+//                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row-1,column,visited) ){
+//            anyOfFourSideIsTrue = true;
+//        }
+//
+//
+//        //Bottom
+//        if(isValidCell(row+1,column,visited,board.length,board[row].length)
+//                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row+1,column,visited)){
+//            anyOfFourSideIsTrue = true;
+//        }
+//
+//        //Left
+//        if(isValidCell(row,column-1,visited,board.length,board[row].length)
+//                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row,column-1,visited)){
+//            anyOfFourSideIsTrue = true;
+//        }
+//
+//        //Right
+//        if(isValidCell(row,column+1,visited,board.length,board[row].length)
+//                && !anyOfFourSideIsTrue && dfs(board,word,nextChar,row,column+1,visited)){
+//            anyOfFourSideIsTrue = true;
+//        }
+//
+//
+//        visited[row][column] = false; //Backtracking, Clearing the visited for next recursion
+//
+//        return anyOfFourSideIsTrue;
+//
+//    }
+//
+//
+//    boolean isValidCell(int row, int column, boolean[][] visited, int maxRow, int maxColumn){
+//
+//        if(row < 0
+//                || column < 0
+//                || row >=maxRow
+//                || column>=maxColumn){
+//            return false;
+//        }
+//        //True if  NOT VISITED
+//        return !visited[row][column]; // MOST IMP Line
+//    }
     
 }
