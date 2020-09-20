@@ -65,7 +65,7 @@ public class LC90 {
 
         @Override
         public boolean contains(Object o) {
-            return super.contains(o);
+            return super.contains(o); // Contains method of ArrayList compares using equals method.
         }
 
         @Override
@@ -93,14 +93,11 @@ public class LC90 {
     }
     
     
-    public void runBacktracking(int[] nums, int index, List<Integer> currentList,List<List<Integer>> output){
-        if(nums.length == index){
-            return;
-        }
-        
+    public void runBacktracking(int[] nums, int index, List<Integer> currentList,List<List<Integer>> output) {
         for(int i = index; i < nums.length; i++){
             currentList.add(nums[i]);
-           
+
+            // Contains method of ArrayList compares on equals method.
             if(!output.contains(currentList)){
                 CustomList<Integer> newList = new CustomList<>();
                 newList.addAll(currentList);

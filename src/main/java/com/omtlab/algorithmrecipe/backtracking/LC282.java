@@ -53,7 +53,7 @@ public class LC282 {
                               List<String> output){
         
         
-        if(index == input.length()) {// We must enter in this if to break the backtraking loop
+        if(index == input.length()) {// We must enter in this if to break the backtracking loop
             
             if(target == value && currentCount == 0){//Only add this if there is no currentCount left and value is same as target.
                 StringBuffer sb = new StringBuffer();
@@ -64,11 +64,17 @@ public class LC282 {
             return;
         }
         
-        
+        // We are only using "currentCount" to take care of this condition
+        // Input: num = "105", target = 5
+        // Output: ["1*0+5","10-5"]
         currentCount = currentCount*10 + Character.getNumericValue(input.charAt(index));
         
         
         if(currentCount > 0){
+            // This condition doesn't make any changes in "value"
+            // Below line requires for
+            // Input: num = "105", target = 5
+            // Output: ["1*0+5","10-5"]
             backtracking(input,index+1,previousCount,currentCount,value,target,runningData,output);
         }
         
