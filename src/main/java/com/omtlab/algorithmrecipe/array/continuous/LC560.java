@@ -1,5 +1,8 @@
 package com.omtlab.algorithmrecipe.array.continuous;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
  * <p>
@@ -63,43 +66,9 @@ public class LC560 {
     }
 
     /**
-     *   Sum : 0 1 2 3
-     *
-     *   Sum[end] - Sum[start]
-     *
-     *   Start 0 and End 1 to 3
-     *    1-0
-     *    2-0 = Got it
-     *    3-0
-     *
-     *   Start  1 and End 2 to 3
-     *    2-1
-     *    3-1 = 2 Got it
-     *
-     *    Start 2 and End 3
-     *    3-2
-     *
-     *    Total Got it 2
      */
     public int subarraySumWorking(int[] nums, int k) {
-        int[] sum = new int[nums.length+1];
-        int output = 0;
-
-        //This starts with 1
-        for(int i=1; i < sum.length; i++) {
-            sum[i] = sum[i-1]+nums[i-1];
-        }
-
-        for(int start =0; start < nums.length; start++) {
-            for(int end = start+1; end < sum.length; end++) { // This ends by sum
-                int subArraySum = sum[end] - sum[start];
-                if(subArraySum == k) {
-                    output++;
-                }
-            }
-        }
-
-        return output;
+        return  new com.omtlab.algorithmrecipe.array.sumarray.LC560().subarraySum(nums, k);
     }
 
 }
