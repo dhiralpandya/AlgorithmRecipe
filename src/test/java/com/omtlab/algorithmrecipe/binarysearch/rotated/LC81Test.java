@@ -1,6 +1,5 @@
-package com.omtlab.algorithmrecipe.array.binarysearch.rotated;
+package com.omtlab.algorithmrecipe.binarysearch.rotated;
 
-import com.omtlab.algorithmrecipe.array.binarysearch.rotated.LC81;
 import org.junit.Assert;
 import org.junit.Test;
 

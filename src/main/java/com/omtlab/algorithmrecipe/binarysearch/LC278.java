@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array.binarysearch;
+package com.omtlab.algorithmrecipe.binarysearch;
 
 /**
  * LC 278. First Bad Version

@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array.binarysearch.rotated;
+package com.omtlab.algorithmrecipe.binarysearch.rotated;
 
 /**
  * 153. Find Minimum in Rotated Sorted Array

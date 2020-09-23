@@ -1,10 +1,8 @@
 package com.omtlab.algorithmrecipe.array.binarysearch;
 
+import com.omtlab.algorithmrecipe.binarysearch.LC278;
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LC278Test {
 

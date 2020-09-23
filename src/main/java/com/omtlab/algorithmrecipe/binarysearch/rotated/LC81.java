@@ -1,6 +1,4 @@
-package com.omtlab.algorithmrecipe.array.binarysearch.rotated;
-
-import java.util.Arrays;
+package com.omtlab.algorithmrecipe.binarysearch.rotated;
 
 /**
  * 81. Search in Rotated Sorted Array II
