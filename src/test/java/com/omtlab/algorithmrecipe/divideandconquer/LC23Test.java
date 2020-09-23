@@ -16,7 +16,8 @@ public class LC23Test {
     public void getMergedNode() {
         List<LinkNode> input = Lists.newArrayList(NodeUtil.generateLinkNodeIntegerValue("1->4->5")
                 ,NodeUtil.generateLinkNodeIntegerValue("1->3->4")
-                ,NodeUtil.generateLinkNodeIntegerValue("2->6"));
+                ,NodeUtil.generateLinkNodeIntegerValue("2->6")
+        );
         LinkNode output = new LC23().getMergedNode(input);
         String expectedOutput = "1->1->2->3->4->4->5->6";
         String outputString = "";

@@ -49,13 +49,14 @@ public class LC410 {
         while(start <= end){
             int mid = (start+end)/2;
             int partition = getNumberOfPartitions(mid,maxPartition,nums);
+            // More partition means our "mid" is too small thats why its creating more partition. Make "mid" bigger.
             if(partition > maxPartition){
                 String log = "[IN START] Start:"+start+" End:"+end+" Mid:"+mid+" Partition:"+partition;
                 start=mid+1;
                 output = start;
                 log+=" Output:"+output+" Now start:"+start;
                 System.out.println(log);
-            } else {
+            } else { // Less partition means "mid" is too big, Make "mid" smaller
                 String log = "[IN END] Start:"+start+" End:"+end+" Mid:"+mid+" Partition:"+partition+" Output:"+output;
                 end = mid-1;
                 log+=" Now end:"+end;

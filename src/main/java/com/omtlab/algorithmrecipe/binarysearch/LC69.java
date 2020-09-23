@@ -28,11 +28,13 @@ public class LC69 {
         double round = 1000000000000.0d;
         double start = 0;
         double end = x;
-        
+
         while (start < end){
             double mid = (start+end)/2;
             double midXmid = mid*mid;
             if(midXmid == x){
+                // Math.round() which returns the closest long to the argument
+                // Math.round(4567.9874f) = 4568
                 return Math.round(mid*round)/round;
             } else if(midXmid < x){
                 //IMP Step
