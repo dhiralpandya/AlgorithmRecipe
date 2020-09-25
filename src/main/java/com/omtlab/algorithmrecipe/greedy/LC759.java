@@ -1,9 +1,6 @@
 package com.omtlab.algorithmrecipe.greedy;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 759. Employee Free Time
@@ -67,7 +64,38 @@ public class LC759 {
             return "["+start+", "+end+"]";
         }
     }
-    
+
+    public List<Interval> employeeFreeTimeLittleSimple(List<List<Interval>> schedule) {
+        List<Interval> output = new ArrayList<>();
+        List<Interval> allInputInSingleList = new ArrayList<>();
+
+        for(List<Interval> lists : schedule) {
+            for(Interval interval:lists) {
+                allInputInSingleList.add(interval);
+            }
+        }
+
+        Collections.sort(allInputInSingleList);
+
+        Interval previous = allInputInSingleList.get(0);
+
+        for(int index = 1; index < allInputInSingleList.size(); index++) {
+            Interval next = allInputInSingleList.get(index);
+
+            if(previous.end >= next.start) {
+                previous.end = Math.max(previous.end, next.end);
+            } else {
+                Interval freeTime = new Interval();
+                freeTime.start = previous.end;
+                freeTime.end = next.start;
+                output.add(freeTime);
+                previous = next; //IMP Step
+            }
+        }
+
+        return output;
+    }
+
     public List<Interval> employeeFreeTime(List<List<Interval>> schedule) {
         List<Interval> output = new ArrayList<>();
 
