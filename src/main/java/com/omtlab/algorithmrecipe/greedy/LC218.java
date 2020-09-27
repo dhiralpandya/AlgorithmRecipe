@@ -67,7 +67,13 @@ public class LC218 {
      * But for sorting we have to consider three edge condition find details in documentation/LC218.png
      * 
      */
-    
+
+    /*
+      See image in documentation/LC218_Main.png
+      Algorithm is simple, We just need to store data in output when there is a change in max height.
+      See image carefully, All the points are pointing to height changes. So use priority queue and keep track of max height,
+      if you see changes in max height just store the data in output.
+     */
     public List<List<Integer>> getSkyline(int[][] building){
         List<List<Integer>> output = Lists.newArrayList();
         
@@ -97,7 +103,7 @@ public class LC218 {
             
             boolean isMaxHeightChanged = maxHeight != queue.peek();
             
-            //Add if height changed
+            //Add if height changed, Mark a point.
             if(isMaxHeightChanged){
                 output.add(Lists.newArrayList(bp.x,queue.peek()));
             }
@@ -141,8 +147,18 @@ public class LC218 {
                 return o.height - this.height;//IMP step we are switching the o and this to put bigger first 
             }
             
-            //2 If both are end, Take smaller first because we dont want to change max height value in our actual algorithm 
-            if(!this.isStart && !o.isStart){
+            //2 If both are end, Take smaller first because we dont want to change max height value in our actual algorithm
+            // Why smaller first ?
+            // Since both end are with same X value,
+            // If we put bigger height first, then we remove bigger first which will change max height
+            // and will add point in wrong location (Location at the end of max height).
+
+            // Why Do you think its wrong location ?
+            // For max height we need point at left corner, but if we remove max first, it will put point in right corner.
+            // Example :
+            // *---- : Left corner is correct.
+            // ----* : Right corner is wrong.
+            if(!this.isStart && !o.isStart) {
                 return this.height - o.height;//Smaller first
             }
             
