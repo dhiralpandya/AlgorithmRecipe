@@ -65,9 +65,12 @@ public class LC324 {
          *  - Because it could possible that there are duplicate medians
          *  - If we start both from First then at the end all medians will be in secuence position
          *  - Something like this: [1,3,1,5,2,2]
-         *
          */
         int firstOddForLarger = 1;
+        // Why nums.length-2:nums.length-1
+        // Lets say correct output as per below
+        // Even : [s,l,s,l,s,l] : Here last "s" is at length-2
+        // Odd : [s,l,s,l,s] :  Here last "s" is at length-1
         int lastEvenForSmaller = nums.length%2==0?nums.length-2:nums.length-1;
         
         int[] result = new int[nums.length];
