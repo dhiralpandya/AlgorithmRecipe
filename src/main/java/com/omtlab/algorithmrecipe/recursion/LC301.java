@@ -56,9 +56,10 @@ public class LC301 {
          * Input : (()()
          * Reverse : )()((
          *
-         * Here in below algorithm, Before storing in answer we are doing REVERSE TWO TIMES.
-         * 1. FIRST Reverse will check Right to Left
-         * 2. SECOND Reverse will undo first reverse and put string back to original position.
+         * First we do leftToRight and then rightToLeft
+         * - How we make sure that ans we get is by removing min numbers of Parentheses
+         *   1. Here we are removing only when we get unstable stack count. It means we are removing from exact position.
+         *   2. Once removed, we are starting next iteration from last count "i"
          *
          */
         Set<String> output = new HashSet<>();
