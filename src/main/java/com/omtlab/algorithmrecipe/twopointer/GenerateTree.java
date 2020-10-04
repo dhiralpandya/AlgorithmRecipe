@@ -17,6 +17,9 @@ public class GenerateTree {
         int p2=1;
         for(int p1=0; p1<a.length && p2 < a.length;p1++){
             TreeNode mid = nodes[p1];
+            if (mid == null) {
+                continue;
+            }
             mid.left = nodes[p2];
             p2++;
             if(p2 >= a.length){
