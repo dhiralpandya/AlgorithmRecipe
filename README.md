@@ -10,25 +10,18 @@
             │   ├── GFGFindFirstDuplicate.java
             │   ├── LC13.java
             │   ├── LC238.java
-            │   ├── LC280.java
             │   ├── LC299.java
-            │   ├── LC324.java
             │   ├── LC334.java
             │   ├── LC670.java
             │   ├── LC674.java
             │   ├── LC75.java
-            │   ├── LC88.java
+            │   ├── LC825.java
+            │   ├── LC896.java
             │   ├── LC953.java
-            │   ├── LC977.java
-            │   ├── binarysearch
-            │   │   ├── LC278.java
-            │   │   └── rotated
-            │   │       ├── LC153.java
-            │   │       ├── LC154.java
-            │   │       ├── LC33.java
-            │   │       └── LC81.java
             │   ├── continuous
             │   │   └── LC560.java
+            │   ├── evenodd
+            │   │   └── LC280.java
             │   ├── map
             │   │   ├── LC398.java
             │   │   └── LC554.java
@@ -53,10 +46,16 @@
             │   └── LC90.java
             ├── binarysearch
             │   ├── LC15.java
+            │   ├── LC278.java
             │   ├── LC410.java
             │   ├── LC50.java
             │   ├── LC69.java
-            │   └── LC875.java
+            │   ├── LC875.java
+            │   └── rotated
+            │       ├── LC153.java
+            │       ├── LC154.java
+            │       ├── LC33.java
+            │       └── LC81.java
             ├── bit
             │   ├── GetBitAtPosition.java
             │   ├── LC191.java
@@ -71,6 +70,8 @@
             │   │   ├── Graph.java
             │   │   ├── Node.java
             │   │   └── State.java
+            │   ├── model
+            │   │   └── KeyValueImpl.java
             │   ├── node
             │   │   ├── LinkNode.java
             │   │   ├── TreeNode.java
@@ -105,6 +106,7 @@
             │   │       ├── LC377.java
             │   │       └── LC647.java
             │   └── singlearray
+            │       ├── LC198.java
             │       ├── LC43.java
             │       ├── LC689.java
             │       ├── LC91.java
@@ -140,19 +142,25 @@
             │   └── LC430.java
             ├── math
             │   ├── LC166.java
-            │   └── LC273.java
+            │   ├── LC204.java
+            │   ├── LC273.java
+            │   └── LC681.java
             ├── matrix
             │   └── bfs
             │       ├── GFGShortDistMrx.java
             │       ├── LC200.java
             │       └── LC286.java
             ├── priorityqueue
+            │   ├── LC1090.java
+            │   ├── LC218.java
             │   └── LC621.java
             ├── quicksort
             │   ├── KthSmalletsElement.java
             │   ├── LC215.java
+            │   ├── LC324.java
             │   └── LC973.java
             ├── recursion
+            │   ├── LC198.java
             │   ├── LC301.java
             │   ├── LC39.java
             │   ├── LC494.java
@@ -161,23 +169,29 @@
             ├── set
             │   └── LC128.java
             ├── sortingalgorithms
+            │   ├── BucketSort.java
             │   └── Quicksort.java
             ├── stack
             │   ├── LC20.java
             │   ├── LC277.java
             │   ├── LC71.java
+            │   ├── LC946.java
             │   └── LC98.java
             ├── string
+            │   ├── LC1055.java
             │   ├── LC28.java
             │   ├── LC38.java
             │   ├── LC387.java
             │   ├── LC647.java
+            │   ├── LC809.java
             │   └── map
             │       ├── GFGAnagramSubstringSearch.java
             │       ├── LC1166.java
             │       ├── LC336.java
             │       ├── LC49.java
             │       └── LC49Prime.java
+            ├── swapinputs
+            │   └── LC1007.java
             ├── tree
             │   ├── bfs
             │   │   ├── LC101.java
@@ -195,11 +209,13 @@
             │   │   └── LC787.java
             │   ├── inorder
             │   │   ├── LC102.java
+            │   │   ├── LC1110.java
             │   │   ├── LC117.java
             │   │   ├── LC173.java
             │   │   ├── LC235.java
             │   │   ├── LC236.java
             │   │   ├── LC285.java
+            │   │   ├── LC298.java
             │   │   ├── LC426.java
             │   │   └── LC98.java
             │   ├── preorder
@@ -224,9 +240,11 @@
                 ├── LC680.java
                 ├── LC755.java
                 ├── LC76.java
-                └── LC860.java
+                ├── LC860.java
+                ├── LC88.java
+                └── LC977.java
 
-55 directories, 168 files
+57 directories, 184 files
 
 
 ```
