@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.array.slidingwindow;
+package com.omtlab.algorithmrecipe.slidingwindow;
 
 import com.google.common.collect.Lists;
 import org.junit.Assert;
@@ -6,8 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LC438Test {
 
