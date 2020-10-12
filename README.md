@@ -1,6 +1,7 @@
 ### Package structure
 
 ```
+
 .
 └── com
     └── omtlab
@@ -25,11 +26,10 @@
             │   ├── map
             │   │   ├── LC398.java
             │   │   └── LC554.java
-            │   ├── slidingwindow
-            │   │   └── LC438.java
             │   └── sumarray
             │       ├── GFGFindPairForSum.java
             │       ├── LC121.java
+            │       ├── LC1477.java
             │       ├── LC325.java
             │       ├── LC523.java
             │       ├── LC560.java
@@ -40,6 +40,7 @@
             │   ├── LC200Copy.java
             │   ├── LC282.java
             │   ├── LC39Copy.java
+            │   ├── LC464.java
             │   ├── LC51.java
             │   ├── LC78.java
             │   ├── LC79.java
@@ -47,6 +48,7 @@
             ├── binarysearch
             │   ├── LC15.java
             │   ├── LC278.java
+            │   ├── LC375.java
             │   ├── LC410.java
             │   ├── LC50.java
             │   ├── LC69.java
@@ -96,6 +98,7 @@
             │   │   ├── GFGWordWrapProblem.java
             │   │   ├── LC221.java
             │   │   ├── LC68.java
+            │   │   ├── LC727.java
             │   │   ├── LC84.java
             │   │   ├── LC85.java
             │   │   └── startwithzero
@@ -150,6 +153,8 @@
             │       ├── GFGShortDistMrx.java
             │       ├── LC200.java
             │       └── LC286.java
+            ├── minimax
+            │   └── LC843.java
             ├── priorityqueue
             │   ├── LC1090.java
             │   ├── LC218.java
@@ -168,6 +173,14 @@
             │       └── LC377.java
             ├── set
             │   └── LC128.java
+            ├── slidingwindow
+            │   ├── LC1248.java
+            │   ├── LC1477.java
+            │   ├── LC438.java
+            │   ├── LC992.java
+            │   └── deque
+            │       ├── LC1438.java
+            │       └── LC239.java
             ├── sortingalgorithms
             │   ├── BucketSort.java
             │   └── Quicksort.java
@@ -186,6 +199,8 @@
             │   ├── LC809.java
             │   └── map
             │       ├── GFGAnagramSubstringSearch.java
+            │       ├── LC1153.java
+            │       ├── LC1153UnusedChar.java
             │       ├── LC1166.java
             │       ├── LC336.java
             │       ├── LC49.java
@@ -231,6 +246,7 @@
             └── twopointer
                 ├── GenerateTree.java
                 ├── LC125.java
+                ├── LC1423.java
                 ├── LC15.java
                 ├── LC161.java
                 ├── LC209.java
@@ -238,13 +254,14 @@
                 ├── LC5.java
                 ├── LC647.java
                 ├── LC680.java
+                ├── LC727.java
                 ├── LC755.java
                 ├── LC76.java
                 ├── LC860.java
                 ├── LC88.java
                 └── LC977.java
 
-57 directories, 184 files
+59 directories, 198 files
 
 
 ```
