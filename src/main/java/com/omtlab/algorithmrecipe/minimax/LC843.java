@@ -81,6 +81,20 @@ public class LC843 {
       SOME MORE DETAILS ON WHY WE ARE TAKING WORD WITH MIN ZERO MATCH
       Nice Solution. Anyone who doesn't know why checking 0 match instead of 1,2,3...6 matches, please take a look at this comment.
       The probability of two words with 0 match is (25/26)^6 = 80%.
+      {
+        For a position that can choose from 26 characters (a,b,...,z),
+        the possibility of the guess one is different than the truth is 25/26.
+        There are totally 6 independent positions and therefore the chance that a guess has 0 match with the truth is (25/26) ^ 6.
+
+        Still confused ?????
+         - Here to calculate possibility, We can consider word of 1 char only, instead of 6 chars
+         - Now from a to z we have total 26 chars, and here lets say we pick char "a" so from a...z, "a" will only match with "a",
+              It means "a" will not match any of from b...z which is 25 chars.
+         - So now possibility of getting zero is 25/26
+         - But now we have 6 chars per word in this problem, So we will use permutations and do exponent of 6
+         - (25/26) ^ 6
+         - Read more : 1. Permutations with Repetition : https://www.mathsisfun.com/combinatorics/combinations-permutations.html
+      }
       That is to say, for a candidate word, we have 80% chance to see 0 match with the secret word.
       In this case, we had 80% chance to eliminate the candidate word and its "family" words which have at least 1 match. Additionally,
       in order to delete a max part of words, we select a candidate who has a big "family" (fewest 0 match with other words).
