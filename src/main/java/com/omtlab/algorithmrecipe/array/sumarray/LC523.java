@@ -5,20 +5,20 @@ import java.util.Map;
 
 /**
  * 523. Continuous Subarray Sum
- * 
- * Given a list of non-negative numbers and a target integer k, write a function to check if the array has a 
+ * <p>
+ * Given a list of non-negative numbers and a target integer k, write a function to check if the array has a
  * continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an
  * integer.
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: [23, 2, 4, 6, 7],  k=6
  * Output: True
  * Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.
  * Example 2:
- *
+ * <p>
  * Input: [23, 2, 6, 4, 7],  k=6
  * Output: True
  * Explanation: Because [23, 2, 6, 4, 7] is an continuous subarray of size 5 and sums up to 42.
@@ -26,18 +26,19 @@ import java.util.Map;
 public class LC523 {
     /**
      * This is HARDEST Problem to solve, 
-     * 
+     *
      * his is one of those magics of remainder theorem :)
      *
      * (a+([ANY NUMBER]*x))%x is same as (a%x)
      *
      * Again : (a+(n*x))%x is same as (a%x)
-     * 
-     * For e.g. in case of the array [23,2,6,4,7] the running sum is [23,25,31,35,42] and the remainders are [5,1,1,
-     * 5,0]. We got remainder 5 at index 0 and at index 3. That means, in between these two indexes we must have 
+     *
+     * For e.g. in case of the array [23,2,6,4,7] the running sum is [23,25,31,35,42] and
+     * the remainders are [5,1,1,5,0]. We got remainder 5 at index 0 and at index 3.
+     * That means, in between these two indexes we must have
      * added a number which is multiple of the k. Hope this clarifies your doubt :)
-     * 
-     * 
+     *
+     *
      */
 
     /**
@@ -75,23 +76,23 @@ public class LC523 {
          * That means, in between these two indexes we must have 
          * added a number which is multiple of the k. Hope this clarifies your doubt :)
          */
-        for(int i = 0; i < nums.length; i++){
-            sum+=nums[i];
-            
-            if(k!=0){
-                sum%=k;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+
+            if (k != 0) {
+                sum %= k;
             }
-            
-            if(map.containsKey(sum) && i-map.get(sum) > 1){//Here > 1 because we need sum of at least 2 
+
+            if (map.containsKey(sum) && i - map.get(sum) > 1) {//Here > 1 because we need sum of at least 2
                 return true;
             }
-            
-            if(!map.containsKey(sum)){//Only insert latest index 
+
+            if (!map.containsKey(sum)) {//Only insert latest index
                 // if key is missing 
                 // because we dont want to override older keys with latest index
-                map.put(sum,i);
+                map.put(sum, i);
             }
-            
+
         }
 
 
