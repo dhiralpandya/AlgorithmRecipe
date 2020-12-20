@@ -1,4 +1,4 @@
-package com.omtlab.algorithmrecipe.dp.matrix;
+package com.omtlab.algorithmrecipe.math;
 
 import java.util.ArrayList;
 import java.util.List;
