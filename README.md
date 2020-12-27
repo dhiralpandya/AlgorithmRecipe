@@ -1,5 +1,7 @@
 ### Package structure
 
+#### 60 directories, 213 files
+
 ```
 .
 └── com
@@ -24,7 +26,8 @@
             │   │   └── LC280.java
             │   ├── map
             │   │   ├── LC398.java
-            │   │   └── LC554.java
+            │   │   ├── LC554.java
+            │   │   └── LC846.java
             │   └── sumarray
             │       ├── GFGFindPairForSum.java
             │       ├── LC121.java
@@ -46,6 +49,7 @@
             │   └── LC90.java
             ├── binarysearch
             │   ├── LC15.java
+            │   ├── LC162.java
             │   ├── LC278.java
             │   ├── LC375.java
             │   ├── LC410.java
@@ -58,10 +62,12 @@
             │       ├── LC33.java
             │       └── LC81.java
             ├── bit
+            │   ├── GFGTwoNumOddTimes.java
             │   ├── GetBitAtPosition.java
             │   ├── LC191.java
             │   ├── LC461.java
             │   ├── LC477.java
+            │   ├── LC540.java
             │   ├── MoveBitLeft.java
             │   ├── MoveBitRight.java
             │   └── XOR.java
@@ -86,9 +92,11 @@
             │   └── using
             │       ├── list
             │       │   └── LC380.java
-            │       └── map
-            │           ├── LC380.java
-            │           └── LC588.java
+            │       ├── map
+            │       │   ├── LC380.java
+            │       │   └── LC588.java
+            │       └── set
+            │           └── LC1348.java
             ├── divideandconquer
             │   └── LC23.java
             ├── dp
@@ -147,7 +155,8 @@
             │   ├── LC166.java
             │   ├── LC204.java
             │   ├── LC273.java
-            │   └── LC681.java
+            │   ├── LC681.java
+            │   └── LC68_Again.java
             ├── matrix
             │   └── bfs
             │       ├── GFGShortDistMrx.java
@@ -158,6 +167,8 @@
             ├── priorityqueue
             │   ├── LC1090.java
             │   ├── LC218.java
+            │   ├── LC295.java
+            │   ├── LC332.java
             │   └── LC621.java
             ├── quicksort
             │   ├── KthSmalletsElement.java
@@ -172,19 +183,23 @@
             │   └── map
             │       └── LC377.java
             ├── set
-            │   └── LC128.java
+            │   ├── LC128.java
+            │   └── SubSetExample.java
             ├── slidingwindow
             │   ├── LC1248.java
             │   ├── LC1477.java
             │   ├── LC438.java
+            │   ├── LC904.java
             │   ├── LC992.java
             │   └── deque
             │       ├── LC1438.java
-            │       └── LC239.java
+            │       ├── LC239.java
+            │       └── LC904.java
             ├── sortingalgorithms
             │   ├── BucketSort.java
             │   └── Quicksort.java
             ├── stack
+            │   ├── LC150.java
             │   ├── LC20.java
             │   ├── LC277.java
             │   ├── LC71.java
@@ -218,6 +233,7 @@
             │   │   ├── LC314.java
             │   │   └── LC773.java
             │   ├── dfs
+            │   │   ├── LC332_Copy.java
             │   │   └── LC756.java
             │   ├── dijkstra
             │   │   ├── GFGShortestPath.java
@@ -261,7 +277,5 @@
                 ├── LC860.java
                 ├── LC88.java
                 └── LC977.java
-
-59 directories, 200 files
 
 ```
