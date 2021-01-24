@@ -14,7 +14,8 @@ import java.util.stream.Collectors;
  * <p>
  * We are given a word list of unique words, each word is 6 letters long, and one word in this list is chosen as secret.
  * <p>
- * You may call master.guess(word) to guess a word.  The guessed word should have type string and must be from the original list with 6 lowercase letters.
+ * You may call master.guess(word) to guess a word.
+ * The guessed word should have type string and must be from the original list with 6 lowercase letters.
  * <p>
  * This function returns an integer type, representing the number of exact matches (value and position) of your guess to the secret word.  Also, if your guess is not in the given wordlist, it will return -1 instead.
  * <p>
@@ -44,7 +45,7 @@ public class LC843 {
         Generally, we will get 0 matches from the master.guess.
         As a result, the size of wordlist reduces slowly.
 
-        Recall some math here, the possiblity that get 0 matched is:
+        Recall some math here, the possibility that get 0 matched is:
         (25/26) ^ 6 = 79.03%
 
         That is to say, if we make a blind guess,
