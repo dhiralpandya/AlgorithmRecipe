@@ -30,7 +30,7 @@ public class LC2034 {
     int minValue = Integer.MAX_VALUE; // So that we can compare first value as less than.
 
     public void update(int timestamp, int price) {
-        if (timestamp > currentTimeStamp) {
+        if (timestamp >= currentTimeStamp) {
             currentTimeStamp = timestamp;
             currentValue = price;
         }
