@@ -23,4 +23,11 @@ public class SubSetExample {
 
         return new ArrayList<>(sortedSet.subSet(startInclusive, endExclusive));
     }
+
+    public List<String> returnWordsStartsWithTailSet(List<String> words, String startInclusive) {
+        SortedSet<String> sortedSet = new TreeSet<>();
+        sortedSet.addAll(words);
+
+        return new ArrayList<>(sortedSet.tailSet(startInclusive));
+    }
 }

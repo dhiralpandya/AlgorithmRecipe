@@ -29,4 +29,14 @@ public class SubSetExampleTest {
         // Here we dont need to specify exact name/word, Just first letter is enough.
         System.out.println(subSetExample.returnWordsBetween(words, "A", "G"));
     }
+
+    @Test
+    public void returnWordsStartsWithTailSet() {
+        List<String> words = Lists.newArrayList("apple", "car",
+                "appapp", "appnew", "some", "Pppp", "Eee", "Ddddd", "Hhhh", "appfkjldmfdlkf");
+
+        // Return words from A to G
+        // Here we dont need to specify exact name/word, Just first letter is enough.
+        System.out.println(subSetExample.returnWordsStartsWithTailSet(words, "app"));
+    }
 }
